@@ -6,35 +6,64 @@
     <title>Formulario Hormiga Visual</title>
 </head>
 <body>
-    <h1>Formulario Hormiga Visual</h1>
-    <form action="/procesar-formulario" method="POST" enctype="multipart/form-data">
-        <div>
-            <label for="inp-usuario">Nombre de usuario: </label>
-            <input type="text" id="inp-usuario" name="nombre_usuario" placeholder="Ingresa tu nombre de usuario" required>
-        </div>
+    <h1>Registro Hormiga Visual</h1>
+    <form action="/procesar-formulario" method="GET" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Información de la cuenta</legend>
+            <div>
+                <label for="inp-usuario">Nombre de usuario: </label>
+                <input type="text" id="inp-usuario" name="nombre_usuario" placeholder="Ingresa tu nombre de usuario" required>
+            </div>
 
-        <div>
-            <label for="inp-contrasena">Contraseña: </label>
-            <input type="password" id="inp-contrasena" name="contrasena_usuario" placeholder="Ingresa tu contraseña" required>
-        </div>
+            <div>
+                <label for="inp-contrasena">Contraseña: </label>
+                <input type="password" id="inp-contrasena" name="contrasena_usuario" placeholder="Ingresa tu contraseña" required>
+            </div>
             
-        <div>
-            <label for="inp-email">Correo electrónico: </label>
-            <input type="email" id="inp-email" name="correo_electronico" placeholder="Ingresa tu correo electrónico" required>
-        </div>
+            <div>
+                <label for="inp-email">Correo electrónico: </label>
+                <input type="email" id="inp-email" name="correo_electronico" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos personales y de servicio</legend>
+
+            <div>
+                <label for="inp-telefono">Teléfono (10 dígitos): </label>
+                <input type="tel" id="inp-telefono" name="telefono" placeholder="Ej. 6120000000" maxlength="10" pattern="[0-9]{10}" required>
+            </div>
+
+            <div>
+            <label for="inp-edad">Edad (de 18 a 100 años): </label>
+                <input type="number" id="inp-edad" name="edad" min="18" max="100" step="2" required>
+            </div>
+
+            <div>
+                <label>Paquete elegido: </label>
+                <label for="rad-express">Express</label>
+                <input type="radio" id="rad-express" name="paquete" value="express" checked>
+                
+                <label for="rad-caminata">Caminata</label>
+                <input type="radio" id="rad-caminata" name="paquete" value="caminata">
+                
+                <label for="rad-premium">Premium</label>
+                <input type="radio" id="rad-premium" name="paquete" value="premium">
+            </div>
+
+            <div>
+                <label for="inp-fecha">Fecha de registro: </label>
+                <input type="date" name="fecha_registro" id="inp-fecha" min="2026-01-01" max="2026-12-31" required>
+            </div>
+
+            <div>
+                <input type="checkbox" id="chk-acuerdos" name="acepta_terminos" required>
+                <label for="chk-acuerdos">Acepto los términos y condiciones del servicio</label>
+            </div>
+        </fieldset>
 
         <div>
-            <label for="inp-edad">Edad: </label>
-            <input type="number" id="inp-edad" name="edad" min="18" max="100" placeholder="Ingrese su edad" required>
-        </div>
-
-        <div>
-            <input type="checkbox" id="chk-acuerdos" name="acepta_terminos" required>
-            <label for="chk-acuerdos">Acepto los términos y condiciones</label>
-        </div>
-
-        <div>
-            <button type="submit">Enviar formulario</button>
+            <button type="submit">Enviar registro</button>
             <button type="reset">Reiniciar</button>
             <button type="button">Ayuda</button>
         </div>
