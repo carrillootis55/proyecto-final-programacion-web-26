@@ -1,27 +1,67 @@
+
+:root {
+  --color-primario: #212227;
+  --color-secundario: #F2F2E6;
+  --color-casual: #ff5926;
+  --color-texto: #FFFFFF;
+
+  --fuente-titulos: 'Raleway', sans-serif;
+  --fuente-cuerpo: 'Inter', sans-serif;
+}
+
 * {
     margin: 20;
-    padding:20;
+    padding: 20;
 }
 
-
-p {
-  color: blue;
+body {
+  background-color: var(--color-primario);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
 }
 
-
-.cafe-negrita {
-    color: burlywood;
-    font-weight: bold;
-}
-
-#secundario {
-    background-color: #F2F2E6 ;
-}
 
 #principal {
-    background-color: #212227;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+}
+
+
+#secundario {
+    background-color: var(--color-secundario);
+    color: #1a1a1a;
 }
 
 #casual {
-    background-color: #ff5926;
+    background-color: var(--color-casual);
+    color: var(--color-texto);
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#secundario p {
+    color: #333333;
+}
+
+.texto-casual {
+    color: var(--color-casual);
+    font-weight: bold;
+}
+
+a {
+    color: var(--color-casual);
+}
+
+header#principal a {
+    color: var(--color-texto);
 }
