@@ -14,6 +14,14 @@ p {
     font-weight: bold;
 }
 
-#inicio {
-    background-color: #F2F2E6;
+#secundario {
+    background-color: #F2F2E6 ;
+}
+
+#principal {
+    background-color: #212227;
+}
+
+#casual {
+    background-color: #ff5926;
 }
