@@ -3,15 +3,16 @@
   --color-primario: #212227;
   --color-secundario: #F2F2E6;
   --color-casual: #ff5926;
-  --color-texto: #FFFFFF;
+  --color-texto: #F2F2E6;
 
   --fuente-titulos: 'Raleway', sans-serif;
   --fuente-cuerpo: 'Inter', sans-serif;
 }
 
 * {
-    margin: 20;
-    padding: 20;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -49,7 +50,7 @@ p {
     line-height: 1.6;
 }
 
-#secundario p {
+#secundario > div >  p {
     color: #333333;
 }
 
