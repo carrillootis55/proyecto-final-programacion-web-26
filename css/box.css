@@ -30,14 +30,13 @@
 
 
 /* Imagen de la tarjeta */
-
-.paquete-card figure {
+.paquete-card__figura {
     margin: 0;
     padding: 0;
 }
 
 
-.paquete-card img {
+.paquete-card__imagen {
     display: block;
 
     width: 100%;
@@ -50,22 +49,17 @@
     border-radius: 6px;
 }
 
-
 /* Nombre del paquete */
-
-.paquete-card h3 {
+.paquete-card__titulo {
     margin: 10px 0;
-
     color: var(--color-texto);
-
     font-family: var(--fuente-titulos);
     font-size: 1.2rem;
 }
 
 
 /* Precio */
-
-.paquete-card p {
+.paquete-card__precio {
     margin: 10px 0;
 
     color: var(--color-casual);
@@ -74,10 +68,12 @@
     font-size: 1.2rem;
 }
 
+.paquete-card__precio--casual {
+    color: var(--color-casual);
+}
 
 /* Boton VER MAS */
-
-.paquete-card a {
+.paquete-card__boton {
     display: inline-block;
 
     margin-top: 10px;
@@ -99,8 +95,7 @@
 
 
 /* Efecto al pasar el mouse */
-
-.paquete-card a:hover {
+.paquete-card__boton:hover {
     background-color: var(--color-texto);
     color: var(--color-casual);
 
@@ -109,7 +104,6 @@
 
 
 /* Tarjeta fotógrafos */
-
 .fotografo-card {
     display: inline-block;
 
@@ -135,14 +129,13 @@
 
 
 /* Imagen de los fotografos */
-
-.fotografo-card figure {
+.fotografo-card__figura {
     margin: 0;
     padding: 0;
 }
 
 
-.fotografo-card img {
+.fotografo-card__imagen {
     display: block;
 
     width: 100%;
@@ -157,8 +150,7 @@
 
 
 /* Nombre del fotografo */
-
-.fotografo-card h3 {
+.fotografo-card__nombre {
     margin: 10px 0;
 
     color: var(--color-texto);
@@ -168,8 +160,7 @@
 
 
 /* Descripcion del fotografo */
-
-.fotografo-card p {
+.fotografo-card__rol {
     margin: 10px 0;
 
     color: var(--color-secundario);
@@ -179,7 +170,6 @@
 
 
 /*Botones */
-
 .boton-box {
     display: inline-block;
 

@@ -66,3 +66,115 @@ a {
 header#principal a {
     color: var(--color-texto);
 }
+
+/* Estilos BEM para el header */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: #1e1f24;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__lista {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__enlace {
+    color: var(--color-texto);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+/* Pseudoclase */
+.menu__enlace:hover {
+    color: var(--color-casual);
+}
+
+/* Pseudoelemento */
+.menu__enlace--activo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-casual);
+}
+
+.boton-contacto {
+    background-color: var(--color-casual);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+/* Seccion del footer */
+.pie-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 12px 40px;  
+    background-color: #1e1f24;
+    font-size: 0.85rem;
+}
+
+.pie-pagina__columna {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.pie-pagina__logo {
+    width: 30px;
+    height: auto;
+}
+
+.pie-pagina__titulo {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.pie-pagina__subtitulo {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.pie-pagina__descripcion {
+    display: none; 
+}
+
+.pie-pagina__iconos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pie-pagina__icono {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.pie-pagina__info {
+    font-size: 0.8rem;
+    color: var(--color-secundario);
+    margin: 0;
+}
