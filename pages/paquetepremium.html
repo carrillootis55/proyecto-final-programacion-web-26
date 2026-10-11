@@ -1,18 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paquete Premium</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Paquete Premium por $2,000 MXN en Hormiga Visual. Incluye 40 fotografías editadas, 3 horas o más de sesión, 3 locaciones y 3 cambios de outfit.">
+    <title>Paquete Premium ($2,000 MXN) | Hormiga Visual</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tipografia.css">
+    <link rel="stylesheet" href="../css/box.css">
+
+
 </head>
 
 <body>
 
-    <main>
-        <h1>Paquete Premium</h1>
-    </main>
+    <div class="layout">
 
+        <header id="principal" class="encabezado navbar layout__header">
+            <div class="encabezado__marca">
+                <a href="../index.html">
+                    <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                </a>
+            </div>
+
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                    <li class="menu__item menu__item--desplegable">
+                        <a class="menu__enlace menu__enlace--activo" href="paquetes.html">Paquetes ▾</a>
+                        <ul class="submenu" aria-label="Submenú de Paquetes">
+                            <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace menu__enlace--activo" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin" href="admin.html">Acceso Admin</a>
+                <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+        <main class="contenido-principal layout__main">
+            <!-- Banner del Paquete -->
+            <section class="banner-pagina">
+                <small class="banner-pagina__subtitulo">DESGLOSE DE SERVICIO</small>
+                <h1 class="banner-pagina__titulo">Paquete Premium</h1>
+                <p class="banner-pagina__desc">La experiencia más completa para portafolios de modelos, marcas personales o proyectos fotográficos de alta exigencia visual.</p>
+            </section>
+
+            <section class="seccion-desglose">
+                <article class="tarjeta-horizontal tarjeta-horizontal--desglose">
+                    <figure class="tarjeta-horizontal__media">
+                        <img class="tarjeta-horizontal__img-desglose" src="../assets/imgIndex/Foto Street-7.jpg" alt="Muestra de sesión Paquete Premium" loading="lazy">
+                    </figure>
+                    <div class="tarjeta-horizontal__info">
+                        <span class="tarjeta-horizontal__etiqueta">PRODUCCIÓN INTEGRAL</span>
+                        <h2 class="tarjeta-horizontal__nombre tarjeta-horizontal__precio-grande">$2,000 <span class="tarjeta-horizontal__moneda">MXN</span></h2>
+                        <p class="tarjeta-horizontal__especialidad tarjeta-horizontal__subtitulo-desglose">Sesión completa con dirección creativa, iluminación artificial y múltiples escenarios</p>
+                        
+                        <h3 class="tarjeta-horizontal__titulo-desglose">Desglose del paquete:</h3>
+                        <ul class="tarjeta-horizontal__lista-desglose">
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ 40 fotografías editadas:</strong> Retoque avanzado de piel, iluminación y corrección de color cinemática.</li>
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ 3 horas o más de sesión:</strong> Sin prisas, adaptándonos al mejor momento de la luz y el atardecer paceño.</li>
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ 3 locaciones:</strong> Combinación de interiores, arquitectura urbana y exteriores naturales/costeros.</li>
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ 3 cambios de outfit:</strong> Hasta 4 combinaciones de prendas para un portafolio versátil y amplio.</li>
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ Entrega premium:</strong> Galería privada, nube permanente y clip detrás de cámaras para Instagram Reels.</li>
+                        </ul>
+
+                        <div class="tarjeta-horizontal__acciones">
+                            <a class="boton-box" href="paquetes.html">Ver Otros Paquetes</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <hr>
+
+       <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+                <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+                <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+                </div>
+
+            </div>
+            
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+                <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+                <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+            </div>
+        </footer>
+
+    </div> 
 </body>
 
 </html>

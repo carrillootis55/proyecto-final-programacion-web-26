@@ -1,18 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paquetes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Conoce los paquetes fotográficos de Hormiga Visual en La Paz, BCS: Express ($700 MXN), Caminata ($1,200 MXN) y Premium ($2,000 MXN).">
+    <title>Paquetes Fotográficos | Hormiga Visual</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tipografia.css">
+    <link rel="stylesheet" href="../css/box.css">
+
 </head>
 
 <body>
-    
-    <main>
-        <h1>Paquetes</h1>
-    </main>
 
+    <div class="layout">
+
+        <header id="principal" class="encabezado navbar layout__header">
+            <div class="encabezado__marca">
+                <a href="../index.html">
+                    <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                </a>
+            </div>
+
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                    <li class="menu__item menu__item--desplegable">
+                        <a class="menu__enlace menu__enlace--activo" href="paquetes.html">Paquetes ▾</a>
+                        <ul class="submenu" aria-label="Submenú de Paquetes">
+                            <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin" href="admin.html">Acceso Admin</a>
+                <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+        <main class="contenido-principal layout__main">
+            <!-- Banner de página -->
+            <section class="banner-pagina">
+                <small class="banner-pagina__subtitulo">SERVICIOS Y TARIFAS</small>
+                <h1 class="banner-pagina__titulo">Nuestros Paquetes Fotográficos</h1>
+                <p class="banner-pagina__desc">Selecciona la experiencia que mejor se adapte a tu proyecto, portafolio o sesión personal. Todos nuestros paquetes incluyen edición digital profesional y entrega en alta resolución.</p>
+            </section>
+
+            <!-- Sección de tarjetas-->
+            <section class="seccion-paquetes seccion-paquetes--espaciada">
+                <!-- Listado con Flexbox  -->
+                <div class="seccion-paquetes__lista grid-productos">
+
+                    <!-- Paquete 1: EXPRESS -->
+                    <article class="paquete-card card" tabindex="0">
+                        <figure class="paquete-card__figura">
+                            <img class="paquete-card__imagen" src="../assets/imgIndex/DSC_0586.jpg" alt="Paquete Express Hormiga Visual" loading="lazy">
+                            <span class="paquete-card__badge">EXPRESS</span>
+                        </figure>
+                        <div class="paquete-card__cuerpo">
+                            <h2 class="paquete-card__titulo">EXPRESS</h2>
+                            <p class="paquete-card__precio">$700 <small class="paquete-card__moneda">MXN</small></p>
+                            <p class="paquete-card__resumen">Sesión rápida y esencial, ideal para renovación de redes y retrato personal básico.</p>
+                            <div class="paquete-card__detalles">
+                                <p>✓ <strong>10 fotografías</strong> editadas</p>
+                                <p>✓ <strong>1 hora</strong> de sesión</p>
+                                <p>✓ <strong>1 locación</strong> urbana</p>
+                                <p>✓ <strong>Sin cambios</strong> de outfit</p>
+                            </div>
+                            <div class="paquete-card__acciones">
+                                <a class="boton-box boton-box--compacto" href="paqueteexpress.html">Ver Desglose Completo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paquete 2: CAMINATA -->
+                    <article class="paquete-card card" tabindex="0">
+                        <figure class="paquete-card__figura">
+                            <img class="paquete-card__imagen" src="../assets/imgIndex/DSC_0150.jpg" alt="Paquete Caminata Hormiga Visual" loading="lazy">
+                            <span class="paquete-card__badge">POPULAR</span>
+                        </figure>
+                        <div class="paquete-card__cuerpo">
+                            <h2 class="paquete-card__titulo">CAMINATA</h2>
+                            <p class="paquete-card__precio">$1,200 <small class="paquete-card__moneda">MXN</small></p>
+                            <p class="paquete-card__resumen">Nuestra ruta urbana más solicitada: captura momentos espontáneos en movimiento.</p>
+                            <div class="paquete-card__detalles">
+                                <p>✓ <strong>20 fotografías</strong> editadas</p>
+                                <p>✓ <strong>2 horas</strong> de recorrido urbano</p>
+                                <p>✓ <strong>2 locaciones</strong> seleccionadas</p>
+                                <p>✓ <strong>1 cambio</strong> de outfit (2 atuendos)</p>
+                            </div>
+                            <div class="paquete-card__acciones">
+                                <a class="boton-box boton-box--compacto" href="paquetecaminata.html">Ver Desglose Completo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paquete 3: PREMIUM -->
+                    <article class="paquete-card card" tabindex="0">
+                        <figure class="paquete-card__figura">
+                            <img class="paquete-card__imagen" src="../assets/imgIndex/Foto Street-7.jpg" alt="Paquete Premium Hormiga Visual" loading="lazy">
+                            <span class="paquete-card__badge">EXCLUSIVO</span>
+                        </figure>
+                        <div class="paquete-card__cuerpo">
+                            <h2 class="paquete-card__titulo">PREMIUM</h2>
+                            <p class="paquete-card__precio">$2,000 <small class="paquete-card__moneda">MXN</small></p>
+                            <p class="paquete-card__resumen">La experiencia definitiva con dirección artística y múltiples ambientes de luz.</p>
+                            <div class="paquete-card__detalles">
+                                <p>✓ <strong>40 fotografías</strong> editadas</p>
+                                <p>✓ <strong>3 horas o más</strong> de sesión</p>
+                                <p>✓ <strong>3 locaciones</strong> distintas</p>
+                                <p>✓ <strong>3 cambios</strong> de outfit</p>
+                            </div>
+                            <div class="paquete-card__acciones">
+                                <a class="boton-box boton-box--compacto" href="paquetepremium.html">Ver Desglose Completo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Tabla comparativa detallada con etiquetas semánticas -->
+            <section id="comparativa" class="seccion-comparativa">
+                <article class="comparativa-caja">
+                    <h3 class="comparativa-titulo">Tabla Comparativa de Servicios</h3>
+                    <div class="admin-tabla-contenedor">
+                        <table class="admin-tabla admin-tabla--comparativa">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Característica</th>
+                                    <th scope="col">Express ($700 MXN)</th>
+                                    <th scope="col">Caminata ($1,200 MXN)</th>
+                                    <th scope="col">Premium ($2,000 MXN)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Fotos editadas</strong></td>
+                                    <td>10 fotografías</td>
+                                    <td>20 fotografías</td>
+                                    <td>40 fotografías</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Duración</strong></td>
+                                    <td>1 hora</td>
+                                    <td>2 horas</td>
+                                    <td>3 horas o más</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Locaciones</strong></td>
+                                    <td>1 locación</td>
+                                    <td>2 locaciones</td>
+                                    <td>3 locaciones</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cambios de outfit</strong></td>
+                                    <td>Sin cambios (1 outfit)</td>
+                                    <td>1 cambio (2 outfits)</td>
+                                    <td>3 cambios (4 outfits)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tiempo de entrega</strong></td>
+                                    <td>48 horas</td>
+                                    <td>72 horas</td>
+                                    <td>5 días</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Formato de entrega</strong></td>
+                                    <td>Galería web privada</td>
+                                    <td>Galería web + feed packs</td>
+                                    <td>Galería web + respaldo nube + reels</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+
+        </main>
+
+        <hr>
+        <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+                <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+                <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+                </div>
+
+            </div>
+            
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+                <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+                <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+            </div>
+        </footer>
+
+    </div> 
 </body>
 
 </html>

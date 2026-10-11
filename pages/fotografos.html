@@ -1,18 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotógrafos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Conoce a los fotógrafos de Hormiga Visual en La Paz, BCS: Gabriel, Dante y Jesús. Especialistas en retrato urbano, colorimetría y fotografía experimental.">
+    <title>Fotógrafos | Hormiga Visual</title>
+
+
 </head>
 
 <body>
+   
+    <div class="layout">
 
-    <main>
-        <h1>Fotógrafos</h1>
+        <header id="encabezado-principal" class="encabezado navbar layout__header">
+            <div class="encabezado__marca">
+                <a href="../index.html">
+                    <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                </a>
+            </div>
+
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                    <li class="menu__item menu__item--desplegable">
+                        <a class="menu__enlace" href="paquetes.html">Paquetes ▾</a>
+                        <ul class="submenu" aria-label="Submenú de Paquetes">
+                            <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__enlace menu__enlace--activo" href="fotografos.html">Fotógrafos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin" href="admin.html">Acceso Admin</a>
+                <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+
+        <main class="contenido-principal layout__main">
+            <!-- Banner de página -->
+            <section class="banner-pagina">
+                <small class="banner-pagina__subtitulo">EQUIPO DE AUTOR</small>
+                <h1 class="banner-pagina__titulo">Nuestros Fotógrafos</h1>
+                <p class="banner-pagina__desc">Conoce a los creadores detrás de cada disparo en Hormiga Visual: Gabriel, Dante y Jesús. Tres visiones complementarias que transforman el entorno urbano de La Paz en escenarios inolvidables.</p>
+            </section>
+
+        <!-- Tarjetas Horizontales con marcos estáticos de fotografía -->
+        <section class="contenedor-tarjetas-horizontales">
+
+            <!-- Fotógrafo 1: GABRIEL -->
+            <article class="tarjeta-horizontal" id="fotografo-gabriel">
+
+                <figure class="tarjeta-horizontal__marco-foto">
+                    <img class="tarjeta-horizontal__foto" src="../assets/imgIndex/gabo.jpg" alt="Fotógrafo Gabriel en sesión" loading="lazy">
+                </figure>
+
+                <!-- Lado Derecho: Información de Gabriel -->
+                <div class="tarjeta-horizontal__info">
+                    <span class="tarjeta-horizontal__etiqueta">FOTÓGRAFO &amp; EDITOR PRINCIPAL</span>
+                    <h2 class="tarjeta-horizontal__nombre">Gabriel</h2>
+                    <p class="tarjeta-horizontal__especialidad">Retrato Urbano • Blanco y Negro de Alto Contraste • Composición Geométrica</p>
+                    <p class="tarjeta-horizontal__bio">
+                        Estudiante de Ciencias de la Comunicación enfocado en la narrativa visual cruda y cinematográfica. Su fascinación por la arquitectura paceña y las sombras duras del desierto le permite capturar retratos sinceros con una fuerza expresiva inolvidable.
+                    </p>
+
+                    <div class="tarjeta-horizontal__datos">
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Especialidad</span>
+                            <span class="tarjeta-horizontal__dato-valor">B&amp;N &amp; Sombras</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Equipo Principal</span>
+                            <span class="tarjeta-horizontal__dato-valor">Nikon Z6 II + 35mm</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Experiencia</span>
+                            <span class="tarjeta-horizontal__dato-valor">4+ años</span>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces de muestra de trabajo (fotografias) -->
+                    <div class="tarjeta-horizontal__acciones">
+                        <a class="boton-box" href="fotografias.html">Ver Obras en Galería</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Fotógrafo 2: DANTE -->
+            <article class="tarjeta-horizontal" id="fotografo-dante">
+                <figure class="tarjeta-horizontal__marco-foto">
+                    <img class="tarjeta-horizontal__foto" src="../assets/imgIndex/dante.jpeg" alt="Fotógrafo Dante en acción" loading="lazy">
+                </figure>
+
+                <!-- Lado Derecho: Información de Dante -->
+                <div class="tarjeta-horizontal__info">
+                    <span class="tarjeta-horizontal__etiqueta">FOTÓGRAFO &amp; DIRECTOR CREATIVO</span>
+                    <h2 class="tarjeta-horizontal__nombre">Dante</h2>
+                    <p class="tarjeta-horizontal__especialidad">Street Photography • Encuadres Experimentales • Movimiento y Grano</p>
+                    <p class="tarjeta-horizontal__bio">
+                        Dante busca romper los esquemas tradicionales del retrato estático. Inspirado en la fotografía analógica y la estética de las calles, aprovecha los momentos imprevistos, los reflejos urbanos y la espontaneidad pura para lograr tomas vivas y orgánicas.
+                    </p>
+
+                    <div class="tarjeta-horizontal__datos">
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Especialidad</span>
+                            <span class="tarjeta-horizontal__dato-valor">Street &amp; Dinamismo</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Equipo Principal</span>
+                            <span class="tarjeta-horizontal__dato-valor">Fujifilm X-T5 + 23mm</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Experiencia</span>
+                            <span class="tarjeta-horizontal__dato-valor">3+ años</span>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces de muestra de trabajo (fotografias) -->
+                    <div class="tarjeta-horizontal__acciones">
+                        <a class="boton-box" href="fotografias.html">Ver Obras en Galería</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Fotógrafo 3: JESÚS -->
+            <article class="tarjeta-horizontal" id="fotografo-jesus">
+                <figure class="tarjeta-horizontal__marco-foto">
+                    <img class="tarjeta-horizontal__foto" src="../assets/imgIndex/jesus.jpeg" alt="Fotógrafo Jesús en sesión" loading="lazy">
+                </figure>
+
+                <!-- Lado Derecho: Información de Jesús -->
+                <div class="tarjeta-horizontal__info">
+                    <span class="tarjeta-horizontal__etiqueta">FOTÓGRAFO &amp; COLORISTA DIGITAL</span>
+                    <h2 class="tarjeta-horizontal__nombre">Jesús</h2>
+                    <p class="tarjeta-horizontal__especialidad">Colorimetría Cálida • Dirección de Poses • Moda y Portafolios</p>
+                    <p class="tarjeta-horizontal__bio">
+                        Jesús combina una técnica meticulosa en gradación de color con una habilidad especial para generar confianza frente al lente. Especializado en hacer que quienes nunca han modelado se sientan plenamente seguros, logrando retratos cálidos y elegantes.
+                    </p>
+
+                    <div class="tarjeta-horizontal__datos">
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Especialidad</span>
+                            <span class="tarjeta-horizontal__dato-valor">Color &amp; Moda</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Equipo Principal</span>
+                            <span class="tarjeta-horizontal__dato-valor">Sony A7 IV + 50mm f/1.4</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Experiencia</span>
+                            <span class="tarjeta-horizontal__dato-valor">4 años</span>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces de muestra de trabajo (fotografias) -->
+                    <div class="tarjeta-horizontal__acciones">
+                        <a class="boton-box" href="fotografias.html">Ver Obras en Galería</a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
     </main>
 
+     <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+                <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+                <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+                </div>
+
+            </div>
+            
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+                <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+                <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+            </div>
+        </footer>
+
+    </div> 
 </body>
 
 </html>

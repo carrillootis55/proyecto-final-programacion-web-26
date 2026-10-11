@@ -1,18 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paquete Caminata</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Paquete Caminata por $1,200 MXN en Hormiga Visual. Incluye 20 fotografías editadas, 2 horas de recorrido urbano, 2 locaciones y 1 cambio de outfit.">
+    <title>Paquete Caminata ($1,200 MXN) | Hormiga Visual</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tipografia.css">
+    <link rel="stylesheet" href="../css/box.css">
+
 </head>
 
 <body>
 
-    <main>
-        <h1>Paquete Caminata</h1>
-    </main>
+    <div class="layout">
 
+        <header id="principal" class="encabezado navbar layout__header">
+            <div class="encabezado__marca">
+                <a href="../index.html">
+                    <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                </a>
+            </div>
+
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                    <li class="menu__item menu__item--desplegable">
+                        <a class="menu__enlace menu__enlace--activo" href="paquetes.html">Paquetes ▾</a>
+                        <ul class="submenu" aria-label="Submenú de Paquetes">
+                            <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace menu__enlace--activo" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin" href="admin.html">Acceso Admin</a>
+                <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+        <main class="contenido-principal layout__main">
+            <!-- Banner del Paquete -->
+            <section class="banner-pagina">
+                <small class="banner-pagina__subtitulo">DESGLOSE DE SERVICIO</small>
+                <h1 class="banner-pagina__titulo">Paquete Caminata</h1>
+                <p class="banner-pagina__desc">Nuestro paquete insignia: un recorrido dinámico y espontáneo por la atmósfera urbana de La Paz, BCS.</p>
+            </section>
+
+            <!-- Contenedor del Desglose con etiquetas semánticas y clases externas -->
+            <section class="seccion-desglose">
+                <article class="tarjeta-horizontal tarjeta-horizontal--desglose">
+                    <figure class="tarjeta-horizontal__media">
+                        <img class="tarjeta-horizontal__img-desglose" src="../assets/imgIndex/DSC_0150.jpg" alt="Muestra de sesión Paquete Caminata" loading="lazy">
+                    </figure>
+                    <div class="tarjeta-horizontal__info">
+                        <span class="tarjeta-horizontal__etiqueta">MÁS POPULAR</span>
+                        <h2 class="tarjeta-horizontal__nombre tarjeta-horizontal__precio-grande">$1,200 <span class="tarjeta-horizontal__moneda">MXN</span></h2>
+                        <p class="tarjeta-horizontal__especialidad tarjeta-horizontal__subtitulo-desglose">Recorrido urbano de autor con dinamismo y estilo callejero</p>
+                        
+                        <h3 class="tarjeta-horizontal__titulo-desglose">Desglose del paquete:</h3>
+                        <ul class="tarjeta-horizontal__lista-desglose">
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ 20 fotografías editadas:</strong> Gradación de color profesional, corrección tonal y detalle fino.</li>
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ 2 horas de recorrido urbano:</strong> Sesión en constante caminata para lograr fotos naturales y espontáneas.</li>
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ 2 locaciones:</strong> Ruta personalizada (murales, arquitectura histórica, callejones y atardecer costero).</li>
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ 1 cambio de outfit:</strong> 2 vestuarios distintos para lograr variedad estética en tu galería.</li>
+                            <li><strong class="tarjeta-horizontal__item-destacado">✓ Entrega digital:</strong> Galería en la nube protegida con contraseña en 72 horas.</li>
+                        </ul>
+
+                        <div class="tarjeta-horizontal__acciones">
+                            <a class="boton-box" href="paquetes.html">Ver Otros Paquetes</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <hr>
+
+        <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+                <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+                <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+                </div>
+
+            </div>
+            
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+                <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+                <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+            </div>
+        </footer>
+
+    </div> 
 </body>
 
 </html>

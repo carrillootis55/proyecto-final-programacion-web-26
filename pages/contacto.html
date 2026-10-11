@@ -1,18 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Ponte en contacto con Hormiga Visual en La Paz, BCS. Consulta fechas disponibles, paquetes o cotizaciones personalizadas.">
+    <title>Contacto | Hormiga Visual</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tipografia.css">
+    <link rel="stylesheet" href="../css/box.css">
+
 </head>
 
 <body>
-    
-    <main>
-        <h1>Contáctanos</h1>
-    </main>
 
+    <div class="layout">
+
+        <header id="principal" class="encabezado navbar layout__header">
+            <div class="encabezado__marca">
+                <a href="../index.html">
+                    <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                </a>
+            </div>
+
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                    <li class="menu__item menu__item--desplegable">
+                        <a class="menu__enlace" href="paquetes.html">Paquetes ▾</a>
+                        <ul class="submenu" aria-label="Submenú de Paquetes">
+                            <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin" href="admin.html">Acceso Admin</a>
+                <a class="boton-contacto menu__enlace--activo" href="contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+        <main class="contenido-principal layout__main">
+            <!-- Banner de página -->
+            <section class="banner-pagina">
+                <small class="banner-pagina__subtitulo">ESTAMOS PARA ATENDERTE</small>
+                <h1 class="banner-pagina__titulo">Contáctanos</h1>
+                <p class="banner-pagina__desc">¿Tienes una idea en mente, dudas sobre locaciones o buscas una cotización a la medida? Escríbenos y con gusto te orientamos.</p>
+            </section>
+
+            <!-- Información de contacto y formulario organizados en grid semántico -->
+            <section class="contacto-layout">
+                
+                <!-- Columna semántica de Información Directa -->
+                <article class="contacto-tarjeta">
+                    <span class="contacto-tarjeta__etiqueta">CANALES DE ATENCIÓN</span>
+                    <h2 class="contacto-tarjeta__titulo">Hormiga Visual</h2>
+                    
+                    <div class="contacto-tarjeta__lista">
+                        <div>
+                            <strong class="contacto-tarjeta__item-titulo">Ubicación:</strong>
+                            <p>La Paz, Baja California Sur, México (Sesiones en malecón, centro histórico y zonas urbanas).</p>
+                        </div>
+
+                        <div>
+                            <strong class="contacto-tarjeta__item-titulo"> WhatsApp Directo:</strong>
+                            <p>+52 (612) 000-0000</p>
+                        </div>
+
+                        <div>
+                            <strong class="contacto-tarjeta__item-titulo">Correo Electrónico:</strong>
+                            <p>contacto@hormigavisuallpz.com</p>
+                        </div>
+
+                        <div>
+                            <strong class="contacto-tarjeta__item-titulo"> Horario de Sesiones:</strong>
+                            <p>Lunes a Domingo • Sesiones matutinas (7:00 AM - 10:00 AM) y atardeceres dorados (4:30 PM - 7:30 PM).</p>
+                        </div>
+                    </div>
+
+                    <div class="contacto-tarjeta__redes">
+                        <h3 class="contacto-tarjeta__redes-titulo">Síguenos en Redes:</h3>
+                        <div class="contacto-tarjeta__redes-botones">
+                            <a href="https://wa.me/526120000000" target="_blank" rel="noopener noreferrer" class="boton-box contacto-tarjeta__boton-red">WhatsApp</a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="boton-box contacto-tarjeta__boton-red">Instagram</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Mensaje directo -->
+                <article class="contacto-tarjeta">
+                    <h2 class="contacto-formulario-titulo">Envíanos un Mensaje</h2>
+                    <p class="contacto-formulario-subtitulo">Te responderemos en menos de 24 horas hábiles.</p>
+                    
+                    <!-- Formulario estándar  -->
+                    <form action="#" method="POST">
+                        <div class="campo-grupo">
+                            <label for="contacto-nombre">Tu Nombre: *</label>
+                            <input class="campo-input" type="text" id="contacto-nombre" name="nombre" required placeholder="Nombre completo" autocomplete="name">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="contacto-email">Tu Correo Electrónico: *</label>
+                            <input class="campo-input" type="email" id="contacto-email" name="email" required placeholder="correo@ejemplo.com" autocomplete="email">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="contacto-asunto">Asunto / Paquete de Interés:</label>
+                            <select class="campo-select" id="contacto-asunto" name="asunto">
+                                <option value="express">Paquete Express ($700 MXN)</option>
+                                <option value="caminata">Paquete Caminata ($1,200 MXN)</option>
+                                <option value="premium">Paquete Premium ($2,000 MXN)</option>
+                                <option value="otro">Consulta general o sesión personalizada</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="contacto-mensaje">Mensaje o Pregunta: *</label>
+                            <textarea class="campo-textarea" id="contacto-mensaje" name="mensaje" rows="4" required placeholder="Escribe aquí tus dudas..."></textarea>
+                        </div>
+
+                        <button class="btn-submit btn-submit--bloque" type="submit">Enviar Mensaje</button>
+                    </form>
+                </article>
+
+            </section>
+        </main>
+
+        <hr>
+
+        <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+                <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+                <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+                </div>
+
+            </div>
+            
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+                <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+                <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+            </div>
+        </footer>
+
+    </div> 
 </body>
 
 </html>

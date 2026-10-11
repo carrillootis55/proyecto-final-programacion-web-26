@@ -1,74 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Hormiga Visual</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Formulario institucional para la creación y registro de nuevos perfiles de administrador en Hormiga Visual. Asignación de roles, permisos y credenciales.">
+    <title>Crear Nuevo Administrador | Hormiga Visual</title>
+
 </head>
+
 <body>
-    <h1>Registro Hormiga Visual</h1>
-    <form action="/procesar-formulario" method="GET" enctype="multipart/form-data">
-        <fieldset>
-            <legend>Información de la cuenta</legend>
-            <div>
-                <label for="inp-usuario">Nombre de usuario: </label>
-                <input type="text" id="inp-usuario" name="nombre_usuario" placeholder="Ingresa tu nombre de usuario" required>
+
+    <div class="layout">
+
+        <header id="encabezado-principal" class="encabezado navbar layout__header">
+            <div class="encabezado__marca">
+                <a href="../index.html">
+                    <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                </a>
             </div>
 
-            <div>
-                <label for="inp-contrasena">Contraseña: </label>
-                <input type="password" id="inp-contrasena" name="contrasena_usuario" placeholder="Ingresa tu contraseña" required>
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                    <li class="menu__item menu__item--desplegable">
+                        <a class="menu__enlace" href="paquetes.html">Paquetes ▾</a>
+                        <ul class="submenu" aria-label="Submenú de Paquetes">
+                            <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin" href="admin.html">Acceso Admin</a>
+                <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+    
+        <main class="contenido-principal layout__main">
+            <!-- Banner del Formulario de Administración -->
+            <section class="banner-pagina">
+                <small class="banner-pagina__subtitulo">SISTEMA ADMINISTRATIVO</small>
+                <h1 class="banner-pagina__titulo">Crear Nuevo Perfil de Administrador</h1>
+                <p class="banner-pagina__desc">Formulario oficial para el alta de nuevas cuentas de gestión interna, asignación de credenciales seguras y configuración de privilegios en Hormiga Visual.</p>
+            </section>
+
+            <!-- Contenedor del Formulario Semántico -->
+            <section class="formulario-contenedor">
+
+                <form class="formulario-registro" action="admin.html" method="POST">
+                    
+                    <!-- FIELDSET 1: Datos Personales y de Contacto  -->
+                    <fieldset>
+                        <legend>1. Datos Personales y de Contacto</legend>
+                        
+                        <div class="campo-grupo">
+                            <label for="admin-nombre">Nombre completo del administrador: *</label>
+                            <input class="campo-input" type="text" id="admin-nombre" name="nombre_completo" placeholder="Ej. Ana Victoria Romero" required autofocus autocomplete="name">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="admin-email">Correo electrónico: *</label>
+                            <input class="campo-input" type="email" id="admin-email" name="correo" placeholder="ejemplo@gmail.com.com" required autocomplete="email">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="admin-telefono">Teléfono celular directo (10 dígitos): *</label>
+                            <input class="campo-input" type="tel" id="admin-telefono" name="telefono_contacto" placeholder="Ej. 6121234567" maxlength="10" pattern="[0-9]{10}" required autocomplete="tel">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="admin-fecha">Fecha de asignación o alta en el sistema: *</label>
+                            <input class="campo-input" type="date" id="admin-fecha" name="fecha_alta" min="2026-01-01" max="2030-12-31" required>
+                        </div>
+                    </fieldset>
+
+                    <!-- FIELDSET 2: Credenciales de Acceso y Seguridad -->
+                    <fieldset>
+                        <legend>2. Credenciales de Seguridad y Acceso</legend>
+
+                        <div class="campo-grupo">
+                            <label for="admin-username">Nombre de usuario (mínimo 4 caracteres): *</label>
+                            <input class="campo-input" type="text" id="admin-username" name="usuario_admin" placeholder="Ej. aromero_admin" minlength="4" maxlength="20" required autocomplete="username">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="admin-password">Contraseña de acceso seguro (mínimo 8 caracteres): *</label>
+                            <input class="campo-input" type="password" id="admin-password" name="password_admin" placeholder="Crea una contraseña alfanumérica segura" minlength="8" required autocomplete="new-password">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="admin-pin">PIN numérico de seguridad (4 dígitos): *</label>
+                            <input class="campo-input" type="number" id="admin-pin" name="pin_seguridad" placeholder="Ej. 7421" min="1000" max="9999" step="1" required>
+                        </div>
+                    </fieldset>
+
+                    <!-- FIELDSET 3: Rol, Departamento y Permisos -->
+                    <fieldset>
+                        <legend>3. Rol, Privilegios y Departamento</legend>
+
+                        <!-- Menú desplegable <select> con <option> -->
+                        <div class="campo-grupo">
+                            <label for="admin-rol">Rol administrativo asignado: *</label>
+                            <select class="campo-select" id="admin-rol" name="rol_administrador" required>
+                                <option value="" disabled selected>Selecciona un rol administrativo...</option>
+                                <option value="superadmin">Superadministrador (Control total del portal)</option>
+                                <option value="editor_contenido">Editor de Contenido y Fotografías</option>
+                                <option value="coordinador">Coordinador de Servicios y Portafolios</option>
+                                <option value="soporte">Administrador de Atención y Contacto</option>
+                            </select>
+                        </div>
+
+                        <!-- Lista de sugerencias con <datalist>  -->
+                        <div class="campo-grupo">
+                            <label for="admin-departamento">Departamento o área interna: *</label>
+                            <input class="campo-input" list="lista-departamentos" id="admin-departamento" name="departamento" placeholder="Escribe o selecciona tu área..." required>
+                            <datalist id="lista-departamentos">
+                                <option value="Dirección Creativa y Fotografía">
+                                <option value="Postproducción, Retoque y Color">
+                                <option value="Gestión de Modelos y Contenido">
+                                <option value="Atención a Clientes y Citas">
+                                <option value="Auditoría y Soporte Web">
+                            </datalist>
+                        </div>
+
+                        <!-- Opciones de radio buttons <input type="radio">  -->
+                        <div class="campo-grupo">
+                            <label>Nivel de privilegios y autorización en el sistema: *</label>
+                            <div class="opciones-radio">
+                                <label class="opcion-radio" for="nivel-1">
+                                    <input type="radio" id="nivel-1" name="nivel_permisos" value="1" checked>
+                                    <span>Nivel 1 (Consulta y Reportería)</span>
+                                </label>
+                                
+                                <label class="opcion-radio" for="nivel-2">
+                                    <input type="radio" id="nivel-2" name="nivel_permisos" value="2">
+                                    <span>Nivel 2 (Edición de Portafolio)</span>
+                                </label>
+                                
+                                <label class="opcion-radio" for="nivel-3">
+                                    <input type="radio" id="nivel-3" name="nivel_permisos" value="3">
+                                    <span>Nivel 3 (Acceso Maestro Total)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Área de texto <textarea>  -->
+                        <div class="campo-grupo">
+                            <label for="admin-funciones">Notas o responsabilidades asignadas (opcional):</label>
+                            <textarea class="campo-textarea" id="admin-funciones" name="funciones_asignadas" rows="4" cols="50" placeholder="Describe las responsabilidades del nuevo administrador (ej. encargado de actualizar fotos de calle, revisión de enlaces, etc.)."></textarea>
+                        </div>
+
+                        <!-- Casilla de verificación <input type="checkbox">  -->
+                        <div class="campo-grupo campo-grupo--espaciado">
+                            <label class="campo-checkbox" for="chk-confidencialidad">
+                                <input type="checkbox" id="chk-confidencialidad" name="acepta_confidencialidad" required>
+                                <span>Certifico que este nuevo perfil administrativo cumple con los lineamientos de seguridad y el acuerdo de confidencialidad institucional de Hormiga Visual *</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Botones de envío y reinicio -->
+                    <div class="formulario-acciones">
+                        <button class="btn-submit" type="submit">Crear Perfil de Administrador</button>
+                        <button class="btn-reset" type="reset">Limpiar Formulario</button>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+                <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+                <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+                </div>
+
             </div>
             
-            <div>
-                <label for="inp-email">Correo electrónico: </label>
-                <input type="email" id="inp-email" name="correo_electronico" placeholder="Ingresa tu correo electrónico" required>
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+                <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+                <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
             </div>
-        </fieldset>
+        </footer>
 
-        <fieldset>
-            <legend>Datos personales y de servicio</legend>
-
-            <div>
-                <label for="inp-telefono">Teléfono (10 dígitos): </label>
-                <input type="tel" id="inp-telefono" name="telefono" placeholder="Ej. 6120000000" maxlength="10" pattern="[0-9]{10}" required>
-            </div>
-
-            <div>
-            <label for="inp-edad">Edad (de 18 a 100 años): </label>
-                <input type="number" id="inp-edad" name="edad" min="18" max="100" step="2" required>
-            </div>
-
-            <div>
-                <label>Paquete elegido: </label>
-                <label for="rad-express">Express</label>
-                <input type="radio" id="rad-express" name="paquete" value="express" checked>
-                
-                <label for="rad-caminata">Caminata</label>
-                <input type="radio" id="rad-caminata" name="paquete" value="caminata">
-                
-                <label for="rad-premium">Premium</label>
-                <input type="radio" id="rad-premium" name="paquete" value="premium">
-            </div>
-
-            <div>
-                <label for="inp-fecha">Fecha de registro: </label>
-                <input type="date" name="fecha_registro" id="inp-fecha" min="2026-01-01" max="2026-12-31" required>
-            </div>
-
-            <div>
-                <input type="checkbox" id="chk-acuerdos" name="acepta_terminos" required>
-                <label for="chk-acuerdos">Acepto los términos y condiciones del servicio</label>
-            </div>
-        </fieldset>
-
-        <div>
-            <button type="submit">Enviar registro</button>
-            <button type="reset">Reiniciar</button>
-            <button type="button">Ayuda</button>
-        </div>
-
-    </form>
-
+    </div> 
 </body>
+
 </html>

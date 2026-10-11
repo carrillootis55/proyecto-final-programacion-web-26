@@ -1,19 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modelos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Portafolio de modelos de Hormiga Visual en La Paz, BCS: Camila, Brandon, Omar y Otilio. Descubre su versatilidad frente a la cámara.">
+    <title>Modelos | Hormiga Visual</title>
+
+
 </head>
 
 <body>
+   
+    <header id="principal" class="encabezado">
+        <div class="encabezado__marca">
+            <a href="../index.html">
+                <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+            </a>
+        </div>
 
-    <main>
-        <h1>Modelos</h1>
+        <nav class="menu" aria-label="Navegación Principal">
+            <ul class="menu__lista">
+                <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                <li class="menu__item menu__item--desplegable">
+                    <a class="menu__enlace" href="paquetes.html">Paquetes ▾</a>
+                    <ul class="submenu" aria-label="Submenú de Paquetes">
+                        <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                        <li class="submenu__item"><a class="submenu__enlace" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                        <li class="submenu__item"><a class="submenu__enlace" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                    </ul>
+                </li>
+                <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                <li class="menu__item"><a class="menu__enlace menu__enlace--activo" href="modelos.html">Modelos</a></li>
+                <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+
+        <div class="encabezado__accion">
+            <a class="boton-admin" href="admin.html">Acceso Admin</a>
+            <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+        </div>
+    </header>
+
+    <hr>
+
+    <main class="contenido-principal">
+        <!-- Banner de página -->
+        <section class="banner-pagina">
+            <small class="banner-pagina__subtitulo">TALENTO FOTOGRÁFICO</small>
+            <h1 class="banner-pagina__titulo">Nuestros Modelos</h1>
+            <p class="banner-pagina__desc">Conoce los rostros que dan vida a nuestras sesiones urbanas y editoriales en La Paz. Explora las fotos verticales de cada modelo y su perfil de estilo.</p>
+        </section>
+
+        <!-- Tarjetas Horizontales con marcos estáticos de fotos -->
+        <section class="contenedor-tarjetas-horizontales">
+
+            <!-- Modelo 1: CAMILA -->
+            <article class="tarjeta-horizontal" id="modelo-camila">
+
+                <figure class="tarjeta-horizontal__marco-foto">
+                    <img class="tarjeta-horizontal__foto" src="../assets/imgIndex/DSC_0586.jpg" alt="Camila - Sesión Urbana" loading="lazy">
+                </figure>
+
+                <!-- Lado Derecho: Información de Camila -->
+                <div class="tarjeta-horizontal__info">
+                    <span class="tarjeta-horizontal__etiqueta">MODELO PRINCIPAL</span>
+                    <h2 class="tarjeta-horizontal__nombre">Camila</h2>
+                    <p class="tarjeta-horizontal__especialidad">Retrato Editorial • Expresión Natural • Moda Urbana</p>
+                    <p class="tarjeta-horizontal__bio">
+                        Camila destaca por su naturalidad ante la cámara y una gran versatilidad para proyectos editoriales y de marca. Su manejo de la mirada y fluidez corporal permiten sesiones espontáneas y de alto valor estético en exteriores e iluminación tenue.
+                    </p>
+
+                    <div class="tarjeta-horizontal__datos">
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Estilo Principal</span>
+                            <span class="tarjeta-horizontal__dato-valor">Minimal &amp; Street</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Sesiones Realizadas</span>
+                            <span class="tarjeta-horizontal__dato-valor">8 proyectos</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Locación Favorita</span>
+                            <span class="tarjeta-horizontal__dato-valor">Malecón &amp; Cafés</span>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces de muestra de trabajo (botón de agendar removido: las citas se coordinan desde Contáctanos) -->
+                    <div class="tarjeta-horizontal__acciones">
+                        <a class="boton-box" href="fotografias.html">Ver en Galería</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Modelo 2: BRANDON -->
+            <article class="tarjeta-horizontal" id="modelo-brandon">
+
+                <figure class="tarjeta-horizontal__marco-foto">
+                    <img class="tarjeta-horizontal__foto" src="../assets/imgIndex/DSC_0236.JPG" alt="Brandon - Sesión Urbana" loading="lazy">
+                </figure>
+
+                <!-- Lado Derecho: Información de Brandon -->
+                <div class="tarjeta-horizontal__info">
+                    <span class="tarjeta-horizontal__etiqueta">MODELO URBANO</span>
+                    <h2 class="tarjeta-horizontal__nombre">Brandon</h2>
+                    <p class="tarjeta-horizontal__especialidad">Streetwear • Retrato de Contraste • Poses Dinámicas</p>
+                    <p class="tarjeta-horizontal__bio">
+                        Brandon aporta una presencia potente y una energía moderna en cada sesión. Especializado en capturas de movimiento, estética urbana y composiciones con iluminación lateral y nocturna.
+                    </p>
+
+                    <div class="tarjeta-horizontal__datos">
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Estilo Principal</span>
+                            <span class="tarjeta-horizontal__dato-valor">Streetwear Urbano</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Sesiones Realizadas</span>
+                            <span class="tarjeta-horizontal__dato-valor">6 proyectos</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Locación Favorita</span>
+                            <span class="tarjeta-horizontal__dato-valor">Murales &amp; Callejones</span>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces de muestra de trabajo  -->
+                    <div class="tarjeta-horizontal__acciones">
+                        <a class="boton-box" href="fotografias.html">Ver en Galería</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Modelo 3: OMAR -->
+            <article class="tarjeta-horizontal" id="modelo-omar">
+                <figure class="tarjeta-horizontal__marco-foto">
+                    <img class="tarjeta-horizontal__foto" src="../assets/imgIndex/DSC_0097.JPG" alt="Omar - Sesión Retrato" loading="lazy">
+                </figure>
+
+                <!-- Lado Derecho: Información de Omar -->
+                <div class="tarjeta-horizontal__info">
+                    <span class="tarjeta-horizontal__etiqueta">MODELO &amp; ARTISTA</span>
+                    <h2 class="tarjeta-horizontal__nombre">Omar</h2>
+                    <p class="tarjeta-horizontal__especialidad">Blanco y Negro • Retrato Psicológico • Luz Suave</p>
+                    <p class="tarjeta-horizontal__bio">
+                        Con un enfoque reflexivo y expresivo, Omar es el perfil predilecto para tomas en blanco y negro, retratos de primer plano y exploraciones con sombras marcadas. Transmite serenidad y carácter artístico en cada encuadre.
+                    </p>
+
+                    <div class="tarjeta-horizontal__datos">
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Estilo Principal</span>
+                            <span class="tarjeta-horizontal__dato-valor">Cinematográfico B&amp;N</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Sesiones Realizadas</span>
+                            <span class="tarjeta-horizontal__dato-valor">7 proyectos</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Locación Favorita</span>
+                            <span class="tarjeta-horizontal__dato-valor">Arquitectura Histórica</span>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces de muestra de trabajo  -->
+                    <div class="tarjeta-horizontal__acciones">
+                        <a class="boton-box" href="fotografias.html">Ver en Galería</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Modelo 4: OTILIO -->
+            <article class="tarjeta-horizontal" id="modelo-otilio">
+                <figure class="tarjeta-horizontal__marco-foto">
+                    <img class="tarjeta-horizontal__foto" src="../assets/imgIndex/DSC_0267.jpg" alt="Otilio - Retrato Casual" loading="lazy">
+                </figure>
+
+                <!-- Lado Derecho: Información de Otilio -->
+                <div class="tarjeta-horizontal__info">
+                    <span class="tarjeta-horizontal__etiqueta">MODELO EDITORIAL</span>
+                    <h2 class="tarjeta-horizontal__nombre">Otilio</h2>
+                    <p class="tarjeta-horizontal__especialidad">Casual Urbano • Mirada Directa • Sesiones de Recorrido</p>
+                    <p class="tarjeta-horizontal__bio">
+                        Otilio destaca por su naturalidad y dinamismo en sesiones de larga duración y caminata urbana. Capaz de adaptarse a múltiples cambios de ropa y atmósferas de luz natural manteniendo una presencia auténtica y relajada.
+                    </p>
+
+                    <div class="tarjeta-horizontal__datos">
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Estilo Principal</span>
+                            <span class="tarjeta-horizontal__dato-valor">Casual &amp; Lifestyle</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Sesiones Realizadas</span>
+                            <span class="tarjeta-horizontal__dato-valor">9 proyectos</span>
+                        </div>
+                        <div>
+                            <span class="tarjeta-horizontal__dato-titulo">Locación Favorita</span>
+                            <span class="tarjeta-horizontal__dato-valor">Centro Paceño</span>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces de muestra de trabajo  -->
+                    <div class="tarjeta-horizontal__acciones">
+                        <a class="boton-box" href="fotografias.html">Ver en Galería</a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
     </main>
 
+    <hr>
 
+    <!-- Pie de página -->
+    <footer id="principal" class="pie-pagina layout__footer">
+        <div class="pie-pagina__columna">
+            <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+            <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+            <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+        </div>
+
+        <div class="pie-pagina__columna">
+            <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+            <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+            <div class="pie-pagina__iconos">
+                <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+            </div>
+
+        </div>
+        
+        <div class="pie-pagina__columna">
+            <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+            <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+            <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,18 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nosotros</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Conoce la historia, visión y equipo detrás de Hormiga Visual. Estudiantes de comunicación apasionados por la fotografía urbana en La Paz, BCS.">
+    <title>Sobre Nosotros | Hormiga Visual</title>
+
+
 </head>
 
 <body>
 
-    <main>
-        <h1>Sobre Nosotros</h1>
-    </main>
+    <div class="layout">
 
+        <header id="principal" class="encabezado navbar layout__header">
+            <div class="encabezado__marca">
+                <a href="../index.html">
+                    <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                </a>
+            </div>
+
+            <!-- Menú de navegación  -->
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="formulario.html">Regístrate aquí</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="paquetes.html">Paquetes</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                    <li class="menu__item"><a class="menu__enlace menu__enlace--activo" href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin" href="admin.html">Acceso Admin</a>
+                <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+
+        <!-- Contenido principal -->
+        <main class="contenido-principal layout__main">
+            <!-- Banner de página -->
+            <section class="banner-pagina">
+                <small class="banner-pagina__subtitulo">NUESTRA ESENCIA</small>
+                <h1 class="banner-pagina__titulo">Sobre Hormiga Visual</h1>
+                <p class="banner-pagina__desc">Explorando la luz, la narrativa y la autenticidad urbana desde La Paz, Baja California Sur.</p>
+            </section>
+
+            <!-- Manifiesto Oficial requerido -->
+            <section id="manifiesto" class="seccion-manifiesto">
+                <article class="manifiesto-caja">
+                    <p class="manifiesto-caja__texto">
+                        "Somos tres estudiantes de la licenciatura en comunicación en busca de nuevas formas de contar historias, nos gusta experimentar con la luz, el entorno urbano y distintos estilos fotográficos para alejarnos de los retratos tradicionales. Nuestro objetivo es probar cosas nuevas en cada sesión y capturar tu esencia de forma honesta y diferente."
+                    </p>
+                    <div class="manifiesto-caja__firma">
+                        <div>
+                            <strong class="manifiesto-caja__autores">Gabriel, Jesús &amp; Dante</strong>
+                            <small class="manifiesto-caja__cargo">Co-fundadores de Hormiga Visual • La Paz, BCS</small>
+                        </div>
+                        <img class="manifiesto-caja__logo" src="../assets/icons/Isotipo.png" alt="Isotipo Hormiga Visual">
+                    </div>
+                </article>
+            </section>
+
+            <!-- Pilares del estudio con Flexbox -->
+            <section id="principios" class="seccion-pilares-contenedor">
+                <div class="seccion-pilares__encabezado">
+                    <small class="seccion-pilares__subtitulo">NUESTROS PRINCIPIOS</small>
+                    <h2 class="seccion-pilares__titulo">¿Cómo abordamos cada disparo?</h2>
+                </div>
+
+                <div class="seccion-pilares grid-productos">
+                    <article class="pilar-card card">
+                        <div class="pilar-card__icono">✦</div>
+                        <h3 class="pilar-card__titulo">Experimentación de Luz</h3>
+                        <p class="pilar-card__desc">Aprovechamos los contrastes de la tarde en BCS, sombras arquitectónicas duras y fuentes de luz alternativas para dotar a cada retrato de carácter único.</p>
+                    </article>
+
+                    <article class="pilar-card card">
+                        <div class="pilar-card__icono">◉</div>
+                        <h3 class="pilar-card__titulo">Entorno Urbano Paceño</h3>
+                        <p class="pilar-card__desc">Convertimos muros intervenidos, callejones con historia, muelles y texturas cotidianas en el escenario vivo de tu sesión fotográfica.</p>
+                    </article>
+
+                    <article class="pilar-card card">
+                        <div class="pilar-card__icono">✹</div>
+                        <h3 class="pilar-card__titulo">Autenticidad sin Poses</h3>
+                        <p class="pilar-card__desc">Creemos que el mejor retrato surge cuando dejas de posar para la cámara y simplemente eres tú mismo. Te guiamos de forma relajada y cercana.</p>
+                    </article>
+                </div>
+            </section>
+
+          
+            <section class="seccion-cta-final">
+                <div class="seccion-cta-final__contenedor">
+                    <h2 class="seccion-cta-final__titulo">¿Listo para contar tu historia con nosotros?</h2>
+                    <p class="seccion-cta-final__desc">Elige tu paquete favorito o escríbenos para diseñar una sesión personalizada en La Paz.</p>
+                    <div class="seccion-cta-final__acciones">
+                        <a class="boton-contacto" href="paquetes.html">Ver Paquetes Disponibles</a>
+                        <a class="boton-box" href="contacto.html">Enviar Mensaje Directo</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <hr>
+        <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+                <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+                <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+                </div>
+
+            </div>
+            
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+                <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+                <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+            </div>
+        </footer>
+
+    </div> <!-- Cierre de .layout  -->
 </body>
 
 </html>

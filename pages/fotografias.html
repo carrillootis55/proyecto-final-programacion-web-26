@@ -1,17 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotografías</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Galería de fotografías de Hormiga Visual en La Paz, BCS. Carruseles especializados para tomas verticales y composiciones horizontales.">
+    <title>Fotografías | Hormiga Visual</title>
+ 
 </head>
 
-<body>
+    <body>
+        <div class="layout">
 
-    <main>
-        <h1>Fotografías</h1>
+            <header id="encabezado-principal" class="encabezado navbar layout__header">
+                <div class="encabezado__marca">
+                    <a href="../index.html">
+                        <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                    </a>
+                </div>
+
+                <nav class="menu" aria-label="Navegación Principal">
+                    <ul class="menu__lista">
+                        <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                        <li class="menu__item menu__item--desplegable">
+                            <a class="menu__enlace" href="paquetes.html">Paquetes ▾</a>
+                            <ul class="submenu" aria-label="Submenú de Paquetes">
+                                <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                                <li class="submenu__item"><a class="submenu__enlace" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                                <li class="submenu__item"><a class="submenu__enlace" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                        <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                        <li class="menu__item"><a class="menu__enlace menu__enlace--activo" href="fotografias.html">Fotografías</a></li>
+                        <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+                    </ul>
+                </nav>
+
+                <div class="encabezado__accion">
+                    <a class="boton-admin" href="admin.html">Acceso Admin</a>
+                    <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+                </div>
+            </header>
+
+        <main class="contenido-principal layout__main">
+                <section class="banner-pagina">
+                    <small class="banner-pagina__subtitulo">PORTAFOLIO VISUAL</small>
+                    <h1 class="banner-pagina__titulo">Nuestras Fotografías</h1>
+                    <p class="banner-pagina__desc">Aprecia nuestro trabajo en su formato óptimo: dos colecciones diseñadas especialmente para explorar tanto la verticalidad del retrato como la amplitud horizontal del paisaje urbano paceño.</p>
+                </section>
+
+            <div class="seccion-galerias">
+
+                <!-- MARCO 1: Fotografias verticales -->
+            <section class="galeria-bloque" id="galeria-vertical">
+                <div class="galeria-bloque__encabezado">
+                    <span class="galeria-bloque__subtitulo">TIPO 1 • ENCUADRES VERTICALES</span>
+                    <h2 class="galeria-bloque__titulo">Retratos y Perspectivas Verticales</h2>
+                    <p class="galeria-bloque__desc">Pensadas para destacar la figura humana, la vestimenta completa, texturas y el impacto visual directo ideal para formatos móviles.</p>
+                </div>
+
+                <div class="marco-foto-vertical-contenedor">
+                    <figure class="marco-foto-vertical">
+                        <img class="carrusel-vertical__img" src="../assets/imgIndex/DSC_0097.JPG" alt="Retrato vertical de Omar" loading="lazy">
+                        <figcaption class="carrusel-vertical__pie">
+                            <h3>Retrato Urbano - Omar</h3>
+                            <p>Luz natural de atardecer en el malecón paceño</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- MARCO 2: Fotografias horizontales -->
+            <section class="galeria-bloque" id="galeria-horizontal">
+                <div class="galeria-bloque__encabezado">
+                    <span class="galeria-bloque__subtitulo">TIPO 2 • ENCUADRES HORIZONTALES</span>
+                    <h2 class="galeria-bloque__titulo">Planos Abiertos y Composiciones Horizontales</h2>
+                    <p class="galeria-bloque__desc">Tomas cinematográficas que integran a la persona con el contexto arquitectónico, las calles y la atmósfera sudcaliforniana.</p>
+                </div>
+
+                <div class="marco-foto-horizontal-contenedor">
+                    <figure class="marco-foto-horizontal">
+                        <img class="carrusel-horizontal__img" src="../assets/imgIndex/Foto Street-7.jpg" alt="Foto horizontal street photography" loading="lazy">
+                        <figcaption class="carrusel-vertical__pie">
+                            <h3>Interacción Urbana - Pareja en Calle</h3>
+                            <p>Composición cinematográfica horizontal en el centro histórico</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+        </div>
     </main>
+
+    <hr>
+    <!-- Pie de página -->
+    <footer id="principal" class="pie-pagina layout__footer">
+        <div class="pie-pagina__columna">
+            <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+            <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+            <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+        </div>
+
+        <div class="pie-pagina__columna">
+            <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+            <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+            <div class="pie-pagina__iconos">
+                <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+            </div>
+
+        </div>
+        
+        <div class="pie-pagina__columna">
+            <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+            <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+            <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+        </div>
+        
+    </footer>
+
+    </div> 
 
 </body>
 
