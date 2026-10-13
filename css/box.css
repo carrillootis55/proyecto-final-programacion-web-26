@@ -19,8 +19,13 @@
     justify-content: space-between;
 
     /* Propiedad de hijo flexible según Diapositiva */
+    /*flex: 1 1 280px;
+    max-width: 360px;*/
+
+    /* Tarjeta adaptable desde movil */
     flex: 1 1 280px;
-    max-width: 360px;
+    width: 100%;
+    max-width: var(--ancho-tarjeta, 360px);
 
     /* Sin márgenes manuales el espaciado entre tarjetas se delega a gap  */
     margin: 0;
@@ -119,7 +124,7 @@
 .paquete-card__imagen {
     display: block;
     width: 100%;
-    height: 240px;
+    height: 280px;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.4s ease;
@@ -150,6 +155,7 @@
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
+    gap: var(--espaciado-sm, 8px);
     margin-top: 15px;
 }
 
@@ -241,14 +247,19 @@
     justify-content: space-between;
 
     /* Hijo flexible  */
+    /*flex: 1 1 280px;
+    max-width: 360px;*/
+
+    /* Tarjeta adaptable desde móvil */
     flex: 1 1 280px;
-    max-width: 360px;
+    width: 100%;
+    max-width: var(--ancho-tarjeta, 360px);
 
     /* Sin márgenes manuales, reemplazados por el gap del contenedor padre  */
     margin: 0;
     padding: 22px 20px;
 
-    border: 1px solid rgba(255, 89, 38, 0.35);;
+    border: 1px solid rgba(255, 89, 38, 0.35);
     border-radius: 12px;
 
     background-color: #ffffff;
@@ -355,6 +366,34 @@
     transform: translateY(-2px);
 }
 
+/* Ajustes para tarjeta movil */
+/*
+.paquete-card__imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.fotografo-card__imagen {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.paquete-card__cuerpo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: var(--espaciado-sm, 8px);
+}
+*/
+
+.paquete-card__detalles {
+    padding: var(--espaciado-sm, 8px);
+    margin-bottom: var(--espaciado-md, 16px);
+}
+
 
 
 /*Botones generales */
@@ -403,3 +442,41 @@
     box-shadow: 0 6px 18px rgba(255, 89, 38, 0.5);
 }
 
+.boton-box--compacto {
+    margin: 0;
+    padding: 8px;
+}
+
+/* diseño responsivo de tarjetas mobile first*/
+
+/* Movil estilos base definidos arriba */
+
+@media (min-width: 768px) {
+    .paquete-card,
+    .fotografo-card {
+        padding: var(--espaciado-lg, 24px);
+    }
+
+    .paquete-card__imagen {
+        height: 220px;
+    }
+
+    .fotografo-card__imagen {
+        height: 340px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .paquete-card,
+    .fotografo-card {
+        padding: var(--espaciado-lg, 24px) 20px;
+    }
+
+    .paquete-card__imagen {
+        height: 240px;
+    }
+
+    .fotografo-card__imagen {
+        height: 380px;
+    }
+}
