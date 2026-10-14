@@ -1503,6 +1503,124 @@ hr {
     margin-top: 10px;
 }
 
+.contenedor-tarjetas-horizontales {
+    max-width: 1140px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.tarjeta-horizontal {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid rgba(255, 89, 38, 0.35);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.tarjeta-horizontal__info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tarjeta-horizontal__datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 3px solid var(--color-casual);
+    margin-bottom: 24px;
+}
+
+.seccion-galerias {
+    max-width: 1200px;
+    margin: 40px auto 70px;
+    padding: 0 20px;
+}
+
+.galeria-bloque {
+    margin-bottom: 70px;
+    background: #191a1f;
+    border: 1px solid rgba(255, 89, 38, 0.25);
+    border-radius: 14px;
+    padding: 35px 25px;
+}
+
+.carrusel-vertical__visor,
+.marco-foto-vertical {
+    width: 100%;
+    max-width: 450px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 89, 38, 0.3);
+    background: #000;
+}
+
+.seccion-manifiesto {
+    padding: 70px 30px;
+    background-color: var(--color-secundario);
+    color: #1a1a1a;
+}
+
+.manifiesto-caja {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 50px 45px;
+    border-left: 6px solid var(--color-casual);
+}
+
+.pilar-card {
+    flex: 1 1 280px;
+    max-width: 340px;
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid rgba(255, 89, 38, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.panel-administracion {
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+.admin-auth-caja {
+    max-width: 480px;
+    margin: 30px auto;
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid rgba(255, 89, 38, 0.4);
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.admin-dashboard {
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid rgba(255, 89, 38, 0.3);
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.admin-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+
 /* =========================================
    diseño responsivo mobile-first
    movil: estilos base */
@@ -1733,7 +1851,6 @@ hr {
 }
 
 
-
 /* Escritorio: desde 1024px */
 
 @media (min-width: 1024px) {
@@ -1850,4 +1967,56 @@ hr {
     }
 }
 
+@media (max-width: 767px) {
+    /* En celulares, la imagen queda arriba y la información abajo */
+    .tarjeta-horizontal {
+        grid-template-columns: 1fr;
+    }
 
+    /* También se adapta el detalle de los paquetes */
+    .tarjeta-horizontal--desglose {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-horizontal__marco-foto,
+    .tarjeta-horizontal__carrusel {
+        height: 320px;
+    }
+
+    .tarjeta-horizontal__media {
+        min-height: 260px;
+    }
+
+    .tarjeta-horizontal__img-desglose {
+        min-height: 260px;
+    }
+
+    /* Evita que las tarjetas de contacto se salgan de la pantalla */
+    .contacto-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Evita que los botones sean demasiado anchos */
+    .tarjeta-horizontal__acciones .boton-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .tarjeta-horizontal__marco-foto,
+    .tarjeta-horizontal__carrusel {
+        height: 260px;
+    }
+
+    .tarjeta-horizontal__nombre {
+        font-size: 1.5rem;
+    }
+
+    .tarjeta-horizontal__datos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .formulario-registro {
+        padding: 12px;
+    }
+}

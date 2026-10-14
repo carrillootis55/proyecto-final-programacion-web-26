@@ -4,14 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotografías</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Portal de administración de Hormiga Visual. Inicio de sesión y registro para gestión de contenidos, paquetes y solicitudes.">
+    <title>Administración | Hormiga Visual</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tipografia.css">
+    <link rel="stylesheet" href="../css/box.css">
+
 </head>
 
 <body>
 
-    <main>
-        <h1>ADMIN</h1>
-    </main>
+    <div class="layout">
+
+        <header id="encabezado-principal" class="encabezado navbar layout__header">
+            <div class="encabezado__marca">
+                <a href="../index.html">
+                    <img class="encabezado__logo" src="../assets/icons/Imagotipo.png" alt="Logotipo Hormiga Visual" width="50" height="71" loading="lazy">
+                </a>
+            </div>
+
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                    <li class="menu__item menu__item--desplegable">
+                        <a class="menu__enlace" href="paquetes.html">Paquetes ▾</a>
+                        <ul class="submenu" aria-label="Submenú de Paquetes">
+                            <li class="submenu__item"><a class="submenu__enlace" href="paqueteexpress.html">Paquete Express ($700)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                            <li class="submenu__item"><a class="submenu__enlace" href="paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografos.html">Fotógrafos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="modelos.html">Modelos</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="fotografias.html">Fotografías</a></li>
+                    <li class="menu__item"><a class="menu__enlace" href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin menu__enlace--activo" href="admin.html">Acceso Admin</a>
+                <a class="boton-contacto" href="contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+
+        <main class="contenido-principal layout__main">
+            <!-- Banner de página -->
+            <section class="banner-pagina">
+                <small class="banner-pagina__subtitulo">SISTEMA INTERNO</small>
+                <h1 class="banner-pagina__titulo">Portal de Administración</h1>
+                <p class="banner-pagina__desc">Inicio de sesión y registro para administradores de Hormiga Visual. Gestiona solicitudes de clientes, paquetes y contenidos del sitio.</p>
+            </section>
+
+            <section class="panel-administracion">
+
+                <!--  login y registro-->
+                <div id="admin-auth" class="admin-auth-caja">
+                    <div class="admin-tabs">
+                        <button id="tab-login" class="admin-tab admin-tab--activo" type="button">Iniciar Sesión</button>
+                        <button id="tab-register" class="admin-tab" type="button">Registrar Admin</button>
+                    </div>
+
+                    <!-- Formulario de Login -->
+                    <form id="form-login">
+                        <div class="campo-grupo">
+                            <label for="login-admin-user">Usuario o Correo:</label>
+                            <input class="campo-input" type="text" id="login-admin-user" required placeholder="admin" value="admin" autocomplete="username">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="login-admin-pass">Contraseña:</label>
+                            <input class="campo-input" type="password" id="login-admin-pass" required placeholder="••••••••" value="admin123" autocomplete="current-password">
+                        </div>
+
+                      
+                        <p class="admin-nota-credenciales">
+                            <em>Credenciales de prueba: Usuario: <strong>admin</strong> | Contraseña: <strong>admin123</strong></em>
+                        </p>
+
+                        <button class="btn-submit btn-submit--ancho-completo" type="submit">Entrar al Panel de Control</button>
+                    </form>
+
+                    <!-- Formulario de Registro (oculto por defecto mediante clase externa) -->
+                    <form id="form-register" class="admin-oculto">
+                        <div class="campo-grupo">
+                            <label for="reg-admin-user">Nuevo Nombre de Usuario:</label>
+                            <input class="campo-input" type="text" id="reg-admin-user" required placeholder="Ej. gabriel_admin" autocomplete="username">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="reg-admin-email">Correo Institucional:</label>
+                            <input class="campo-input" type="email" id="reg-admin-email" required placeholder="admin@hormigavisuallpz.com" autocomplete="email">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="reg-admin-pass">Contraseña (mínimo 6 caracteres):</label>
+                            <input class="campo-input" type="password" id="reg-admin-pass" required minlength="6" placeholder="Crea tu contraseña" autocomplete="new-password">
+                        </div>
+
+                        <button class="btn-submit btn-submit--margen-top" type="submit">Crear Cuenta de Administrador</button>
+                    </form>
+                </div>
+
+                <!-- DASHBOARD DEL ADMINISTRADOR (VISIBLE AL INICIAR SESIÓN) dashboard administardor,  -->
+                <div id="admin-dashboard" class="admin-dashboard admin-oculto">
+                    <div class="admin-dashboard__header">
+                        <div>
+                            <span class="admin-header-etiqueta">SESIÓN ACTIVA</span>
+                            <h2 class="admin-header-titulo">Panel de Control: <span id="admin-nombre-usuario" class="admin-usuario-destacado"></span></h2>
+                        </div>
+                        <button id="btn-cerrar-sesion" class="btn-reset btn-reset--peligro" type="button">Cerrar Sesión</button>
+                    </div>
+
+                    <!--  solicitudes clientes -->
+                    <div class="admin-bloque-seccion">
+                        <div class="admin-bloque-cabecera">
+                            <div>
+                                <h3 class="admin-subtitulo-seccion">Solicitudes de Registro y Reservas</h3>
+                                <p class="admin-desc-seccion">Clientes que completaron el formulario en la web.</p>
+                            </div>
+                        </div>
+
+                        <div class="admin-tabla-contenedor">
+                            <table class="admin-tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID Registro</th>
+                                        <th>Fecha Registro</th>
+                                        <th>Cliente</th>
+                                        <th>Contacto</th>
+                                        <th>Paquete</th>
+                                        <th>Fecha Sesión</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-solicitudes-body">
+                                    <!-- Filas dinámicas -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- seccion gestionar paquetes y precios-->
+                    <div>
+                        <div class="admin-bloque-cabecera">
+                            <div>
+                                <h3 class="admin-subtitulo-seccion">Gestión de Paquetes y Contenido</h3>
+                                <p class="admin-desc-seccion">Edita tarifas, detalles o agrega nuevos servicios al catálogo.</p>
+                            </div>
+                            <button id="btn-agregar-paquete" class="btn-submit btn-submit--compacto" type="button">+ Agregar Nuevo Paquete</button>
+                        </div>
+
+                        <div id="lista-paquetes-admin" class="admin-paquetes-grid">
+                          
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+         <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+                <img class="pie-pagina__logo" src="../assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" height="128" loading="lazy">
+                <p class="pie-pagina__descripcion"> Estudio de fotografía. <br> Capturamos historias, creamos <br> imágenes que perduran. </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto"> WhatsApp | Instagram </p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/logo whatsapp.jpg" alt="Logo WhatsApp" width="50" height="50" loading="lazy">
+                    <img class="pie-pagina__icono" src="../assets/imgIndex/insta logo.jpg" alt="Logo Instagram" width="50.6" height="50.6" loading="lazy">
+                </div>
+
+            </div>
+            
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info"> <strong>Versión del software:</strong> 1.0 </p>
+                <p class="pie-pagina__info"> <small> © 2026 Hormiga Visual. Todos los derechos reservados. </small> </p>
+                <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a> </p>
+            </div>
+        </footer>
+
+      
+    </div> 
 
 </body>
 
