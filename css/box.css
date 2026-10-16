@@ -216,7 +216,11 @@
     letter-spacing: 1px;
     text-decoration: none;
     cursor: pointer;
-    transition: 0.25s ease;
+    
+    transition: background-color 0.25s ease, 
+    color 0.25s ease, 
+    box-shadow 0.25s ease, 
+    transform 0.25s ease;
 }
 
 
@@ -356,7 +360,10 @@
     text-decoration: none;
     cursor: pointer;
 
-    transition: all 0.25s ease;
+    transition: background-color 0.25s ease, 
+    color 0.25s ease, 
+    box-shadow 0.25s ease, 
+    transform 0.25s ease;
 }
 
 .fotografo-card__boton:hover {
