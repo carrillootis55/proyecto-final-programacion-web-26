@@ -1,4 +1,28 @@
+/*
+ÍNDICE GENERAL — styles.css
+01. Variables globales, paleta de colores y temas
+02. Estilos generales, selección de texto y secciones base
+03. Tipografía base y jerarquía de encabezados
+04. Estructura principal, grid y áreas de layout
+05. Navegación, menú, sidebar y enlaces
+06. Botones del encabezado y accesos administrativos
+07. Galerías e imágenes destacadas
+08. Secciones de paquetes y fotógrafos de la página principal
+09. Estilos de páginas internas y banners
+10. Tarjetas horizontales de fotógrafos y modelos
+11. Formularios, campos, validación y mensajes
+12. Página de paquetes y tabla comparativa
+13. Páginas de detalle de paquetes
+14. Página de contacto
+15. CSS avanzado: medidas adaptables, clamp, nesting, transiciones y transformaciones
+16. Animaciones y efectos de logotipos
+17. Ajustes de contraste para temas claro y oscuro
+18. Ajustes finales de presentación y tarjetas
+19. Diseño responsivo: móvil, tablet, escritorio y escritorio amplio
+*/
 
+/* Se retiraron las declaraciones de prioridad forzada de reglas normales; solo se conservan en prefers-reduced-motion. */
+/*
 :root {
     --color-primario: #212227;
     --color-secundario: #F2F2E6;
@@ -17,7 +41,6 @@
     --sombra-tarjeta: 0 8px 24px rgba(0, 0, 0, 0.35);
     --brillo-casual: 0 0 25px rgba(255, 89, 38, 0.45);
 
-    /* Espaciados reutilizables */
     --espaciado-xs: 4px;
     --espaciado-sm: 8px;
     --espaciado-md: 16px;
@@ -26,21 +49,18 @@
     --espaciado-2xl: 48px;
     --espaciado-3xl: 64px;
 
-    /* Radios de borde */
     --radio-sm: 6px;
     --radio-md: 12px;
     --radio-lg: 16px;
     --radio-xl: 20px;
     --radio-redondo: 50%;
 
-    /* Tamaños de contenido */
     --ancho-contenido: 1200px;
     --ancho-formulario: 760px;
     --ancho-tarjeta: 360px;
     --ancho-tablet: 720px;
     --ancho-escritorio: 1200px;
 
-    /* Tamaños de tipografía */
     --texto-xs: 0.75rem;
     --texto-sm: 0.875rem;
     --texto-base: 1rem;
@@ -48,10 +68,156 @@
     --texto-xl: 1.25rem;
     --texto-2xl: 1.5rem;
 
-    /* Separación y bordes */
     --borde-suave: 1px solid var(--color-borde-suave);
     --espaciado-seccion: 48px;
 }
+*/
+
+/*==========================================================*/
+/* ===== 01. Variables globales, paleta de colores y temas ===== */
+/* 
+   PALETA CLARA PREDETERMINADA + VARIABLES SEMÁNTICAS
+   Nuevo bloque agregado el 15/10/2026.
+   La paleta oscura se activa según la preferencia del sistema.
+ */
+ :root {
+    color-scheme: light dark;
+
+    /* Colores principales */
+    --color-primario: #f2f2e6;
+    --color-secundario: #ffffff;
+    --color-casual: #e9471b;
+    --color-casual-hover: #c83b17;
+    --color-casual-rgb: 233, 71, 27;
+
+    /* Texto */
+    --color-texto: #212227;
+    --color-texto-secundario: #555555;
+    --color-texto-suave: #666666;
+    --color-texto-tenue: #777777;
+    --color-texto-sobre-acento: #ffffff;
+    --color-texto-sobre-acento-secundario: #eeeeee;
+
+    /* Fondos y superficies */
+    --color-fondo: #f2f2e6;
+    --color-fondo-oscuro: #e7e7dc;
+    --color-fondo-tarjeta: #ffffff;
+    --color-fondo-input: #ffffff;
+    --color-fondo-hover: rgba(33, 34, 39, 0.06);
+    --color-fondo-media: #e5e5dc;
+    --color-fondo-detalle: rgba(33, 34, 39, 0.05);
+
+    /* Bordes */
+    --color-borde-suave: rgba(33, 34, 39, 0.15);
+    --color-borde-acento: rgba(233, 71, 27, 0.35);
+    --color-borde-tabla: #b9b9b0;
+
+    /* Transparencias reutilizables */
+    --color-casual-transparente: rgba(233, 71, 27, 0.10);
+    --color-casual-hover-fondo: rgba(233, 71, 27, 0.15);
+    --color-negro-rgb: 0, 0, 0;
+    --color-blanco-rgb: 255, 255, 255;
+    --color-exito-rgb: 38, 166, 91;
+    --color-exito: #26a65b;
+    --color-exito-brillante: #2ecc71;
+    --color-casual-claro: #ffb3a0;
+
+    /* Sombras y filtros */
+    --sombra-tarjeta: 0 8px 24px rgba(var(--color-negro-rgb), 0.12);
+    --sombra-elevada: 0 12px 28px rgba(var(--color-negro-rgb), 0.18);
+    --sombra-hover: 0 12px 30px rgba(var(--color-negro-rgb), 0.22);
+    --brillo-casual: 0 0 25px rgba(233, 71, 27, 0.25);
+    --filtro-logo: drop-shadow(0 2px 8px rgba(233, 71, 27, 0.30));
+
+    /* Tipografías */
+    --fuente-titulos: 'Raleway', sans-serif;
+    --fuente-cuerpo: 'Inter', sans-serif;
+
+    /* Espaciados */
+    --espaciado-xs: 4px;
+    --espaciado-sm: 8px;
+    --espaciado-md: 16px;
+    --espaciado-lg: 24px;
+    --espaciado-xl: 32px;
+    --espaciado-2xl: 48px;
+    --espaciado-3xl: 64px;
+
+    /* Radios */
+    --radio-sm: 6px;
+    --radio-md: 12px;
+    --radio-lg: 16px;
+    --radio-xl: 20px;
+    --radio-redondo: 50%;
+
+    /* Anchos */
+    --ancho-contenido: 1200px;
+    --ancho-formulario: 760px;
+    --ancho-tarjeta: 360px;
+    --ancho-tablet: 720px;
+    --ancho-escritorio: 1200px;
+
+    /* Tamaños tipográficos */
+    --texto-xs: 0.75rem;
+    --texto-sm: 0.875rem;
+    --texto-base: 1rem;
+    --texto-lg: 1.125rem;
+    --texto-xl: 1.25rem;
+    --texto-2xl: 1.5rem;
+
+    --borde-suave: 1px solid var(--color-borde-suave);
+    --espaciado-seccion: 48px;
+}
+
+/* Paleta oscura automática: cambia las variables, no los componentes. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primario: #212227;
+        --color-secundario: #292a30;
+        --color-casual: #ff5926;
+        --color-casual-hover: #ff7647;
+        --color-casual-rgb: 255, 89, 38;
+
+        --color-texto: #f2f2e6;
+        --color-texto-secundario: #cccccc;
+        --color-texto-suave: #aaaaaa;
+        --color-texto-tenue: #999999;
+        --color-texto-sobre-acento: #ffffff;
+        --color-texto-sobre-acento-secundario: #eeeeee;
+
+        --color-fondo: #17181c;
+        --color-fondo-oscuro: #141519;
+        --color-fondo-tarjeta: #1d1e23;
+        --color-fondo-input: #17181c;
+        --color-fondo-hover: rgba(var(--color-blanco-rgb), 0.06);
+        --color-fondo-media: #111216;
+        --color-fondo-detalle: rgba(var(--color-negro-rgb), 0.25);
+        --color-borde-suave: rgba(var(--color-blanco-rgb), 0.12);
+        --color-borde-acento: rgba(var(--color-casual-rgb), 0.35);
+        --color-borde-tabla: #444444;
+
+        --color-casual-transparente: rgba(var(--color-casual-rgb), 0.10);
+       
+        --color-casual-hover-fondo: rgba(var(--color-casual-rgb), 0.15);
+        --color-negro-rgb: 0, 0, 0;
+        --color-blanco-rgb: 255, 255, 255;
+        --color-exito-rgb: 38, 166, 91;
+        --color-exito: #26a65b;
+        --color-exito-brillante: #2ecc71;
+        --color-casual-claro: #ffb3a0;
+
+        --sombra-tarjeta: 0 8px 24px rgba(var(--color-negro-rgb), 0.35);
+        
+        --sombra-elevada: 0 12px 28px rgba(var(--color-negro-rgb), 0.70);
+        
+        --sombra-hover: 0 12px 30px rgba(var(--color-negro-rgb), 0.60);
+        
+        --brillo-casual: 0 0 25px rgba(var(--color-casual-rgb), 0.45);
+        
+        --filtro-logo: drop-shadow(0 2px 8px rgba(var(--color-casual-rgb), 0.40));
+    }
+}
+
+/* ===== 02. Estilos generales, selección de texto y secciones base===== */
 
 /* Estilos generales*/
 
@@ -64,8 +230,9 @@
 /* Pseudoelemento de selección de texto */
 ::selection {
     background-color: var(--color-casual);
-    color: #ffffff;
+    color: var(--color-texto);
 }
+
 
 body {
   background-color: var(--color-primario);
@@ -88,7 +255,7 @@ img {
 
 #secundario {
     background-color: var(--color-secundario);
-    color: #1a1a1a;
+    color: var(--color-texto);
 }
 
 #casual {
@@ -96,6 +263,7 @@ img {
     color: var(--color-texto);
 }
 
+/* ===== 03. Tipografía base y jerarquía de encabezados ===== */
 /* Tipografía base */
 h1, h2, h3, h4 {
     font-family: var(--fuente-titulos);
@@ -123,7 +291,7 @@ p {
 
 #secundario > div >  p,
 #secundario p  {
-    color: #2b2b2b;
+    color: var(--color-texto-secundario);
 }
 
 .texto-casual {
@@ -143,7 +311,7 @@ header#principal a {
 hr {
     border: none;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 89, 38, 0.35), transparent);
+    background: linear-gradient(90deg, transparent, rgba(var(--color-casual-rgb), 0.35), transparent);
     margin: 0;
 }
 
@@ -169,6 +337,7 @@ hr {
     padding: var(--espaciado-sm);
 }
 
+/* ===== 04. Estructura principal, grid y áreas de layout ===== */
 /* Asignación de areas */
 .layout__header,
 .header,
@@ -229,10 +398,11 @@ hr {
     margin: 0 auto;
 }*/
 
+/* ===== 05. Navegación, menú, sidebar y enlaces ===== */
 /* Barra de Opciones / Sidebar  */
 .opciones-aside {
-    background-color: #16171b;
-    border-bottom: 1px solid rgba(255, 89, 38, 0.2);
+    background-color: var(--color-fondo-oscuro);
+    border-bottom: 1px solid rgba(var(--color-casual-rgb), 0.2);
     padding: 9px 40px;
 }
 
@@ -265,7 +435,7 @@ hr {
 }
 
 .opciones-aside__enlace {
-    color: #b0b0b8;
+    color: var(--color-texto-secundario);
     text-decoration: none;
     font-size: 0.82rem;
     transition: color 0.2s ease;
@@ -291,14 +461,14 @@ hr {
     gap: 16px;
 
     padding: 14px 24px;
-    background-color: #1a1b20;
+    background-color: var(--color-fondo-oscuro);
 
     position: sticky;
     top: 0;
     z-index: 100;
 
-    border-bottom: 1px solid rgba(255, 89, 38, 0.2);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(var(--color-casual-rgb), 0.2);
+    box-shadow: 0 4px 15px rgba(var(--color-negro-rgb), 0.3);
 }
 
 .encabezado__marca {
@@ -311,7 +481,7 @@ hr {
     width: 44px;
     height: auto;
     display: block;
-    filter: drop-shadow(0 2px 5px rgba(255, 89, 38, 0.3));
+    filter: drop-shadow(0 2px 5px rgba(var(--color-casual-rgb), 0.3));
 }
 
 .menu {
@@ -381,14 +551,14 @@ hr {
     display: none;
 
     min-width: 230px;
-    background-color: #1a1b20;
-    border: 1px solid rgba(255, 89, 38, 0.35);
+    background-color: var(--color-fondo-oscuro);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.35);
     border-radius: 8px;
     padding: 8px 0;
     list-style: none;
     margin: 6px 0 0 0;
 
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 12px 28px rgba(var(--color-negro-rgb), 0.7);
     z-index: 150; 
 }
 
@@ -416,7 +586,7 @@ hr {
 }
 
 .submenu__enlace:hover {
-    background-color: rgba(255, 89, 38, 0.15);
+    background-color: rgba(var(--color-casual-rgb), 0.15);
     color: var(--color-casual);
     padding-left: 22px;
 }
@@ -427,10 +597,11 @@ hr {
     gap: 12px;
 }
 
+/* ===== 06. Botones del encabezado y accesos administrativos ===== */
 /* Botones del encabezado */
 .boton-contacto {
     background-color: var(--color-casual);
-    color: #ffffff !important;
+    color: var(--color-texto-sobre-acento);
     text-decoration: none;
     padding: 9px 20px;
     border-radius: 6px;
@@ -444,7 +615,7 @@ hr {
 .boton-contacto:hover {
     background-color: var(--color-casual-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 89, 38, 0.4);
+    box-shadow: 0 4px 15px rgba(var(--color-casual-rgb), 0.4);
 }
 
 .boton-contacto:active {
@@ -454,11 +625,11 @@ hr {
 /* Enlace a  Administrador  */
 .boton-admin {
     background: transparent;
-    color: var(--color-secundario) !important;
+    color: var(--color-texto);
     text-decoration: none;
     font-size: 0.85rem;
     padding: 8px 14px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(var(--color-blanco-rgb), 0.2);
     border-radius: 6px;
     transition: color 0.25s ease,
             border-color 0.25s ease,
@@ -467,8 +638,8 @@ hr {
 
 .boton-admin:hover {
     border-color: var(--color-casual);
-    color: var(--color-casual) !important;
-    background: rgba(255, 89, 38, 0.08);
+    color: var(--color-casual);
+    background: rgba(var(--color-casual-rgb), 0.08);
 }
 
 /* 
@@ -478,7 +649,7 @@ hr {
     width: 100%;
     padding: 60px 20px;
     background-color: var(--color-secundario);
-    color: #1a1a1a;
+    color: var(--color-texto);
     display: flex;
     justify-content: center;
 }
@@ -511,9 +682,10 @@ hr {
     max-width: 720px;
     margin: 0 auto 40px;
     font-size: 1.1rem;
-    color: #3f3f3f;
+    color: var(--color-texto-secundario);
 }
 
+/* ===== 07. Galerías e imágenes destacadas===== */
 /* Galería equilibrada de 3 imágenes */
 /*
 .presentacion__galeria {
@@ -539,14 +711,14 @@ hr {
 .presentacion__foto {
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(var(--color-negro-rgb), 0.15);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    background-color: #fff;
+    background-color: var(--color-fondo-tarjeta);
 }
 
 .presentacion__foto:hover {
     transform: translateY(-8px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 18px 35px rgba(var(--color-negro-rgb), 0.25);
 }
 
 .presentacion__imagen {
@@ -640,11 +812,11 @@ hr {
     width: 70px;
     height: auto;
     opacity: 0.9;
-    filter: drop-shadow(0 2px 8px rgba(255, 89, 38, 0.4));
+    filter: drop-shadow(0 2px 8px rgba(var(--color-casual-rgb), 0.4));
 }
 
 .seccion-paquetes__descripcion {
-    color: #bbbbbb;
+    color: var(--color-texto-secundario);
     font-size: 1.05rem;
     margin-top: 10px;
 }
@@ -689,7 +861,7 @@ hr {
     padding: 40px 20px;
     text-align: center;
     background-color: var(--color-secundario);
-    color: #1a1a1a;
+    color: var(--color-texto);
 }
 
 .seccion-fotografos__encabezado {
@@ -714,7 +886,7 @@ hr {
 
 .seccion-fotografos__descripcion {
     margin-top: 8px;
-    color: #555555;
+    color: var(--color-texto-secundario);
 }
 
 .seccion-fotografos__enlace {
@@ -726,6 +898,7 @@ hr {
     padding-bottom: 2px;
 }
 
+/* ===== 08. Secciones de paquetes y fotógrafos de la página principal ===== */
 /* Listado de fotografos con Flexbox  */
 .seccion-fotografos__lista {
     display: flex;
@@ -759,9 +932,9 @@ hr {
     justify-content: space-between;
     align-items: center; 
     padding: 24px 20px;  
-    background-color: #17181c;
+    background-color: var(--color-fondo);
     font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 89, 38, 0.2);
+    border-top: 1px solid rgba(var(--color-casual-rgb), 0.2);
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -775,12 +948,12 @@ hr {
 .pie-pagina__logo {
     width: 45px;
     height: auto;
-    filter: drop-shadow(0 2px 6px rgba(255, 89, 38, 0.4));
+    filter: drop-shadow(0 2px 6px rgba(var(--color-casual-rgb), 0.4));
 }
 
 .pie-pagina__titulo {
     font-size: 1.2rem;
-    color: var(--color-secundario);
+    color: var(--color-texto);
 }
 
 .pie-pagina__subtitulo {
@@ -790,7 +963,7 @@ hr {
 
 .pie-pagina__descripcion {
     font-size: 0.85rem;
-    color: #999;
+    color: var(--color-texto-tenue);
     line-height: 1.4;
 }
 
@@ -813,7 +986,7 @@ hr {
 
 .pie-pagina__info {
     font-size: 0.82rem;
-    color: #aaa;
+    color: var(--color-texto-suave);
 }
 
 .pie-pagina__enlace-admin {
@@ -827,15 +1000,16 @@ hr {
     text-decoration: underline;
 }
 
+/* ===== 09. Estilos de páginas internas y banners===== */
 /* ======Estilos paginas especificas====== */
 
 /* Hero Banner de subpáginas */
 .banner-pagina {
-    background: linear-gradient(180deg, #16171b 0%, #212227 100%);
+    background: linear-gradient(180deg, var(--color-fondo-oscuro) 0%, var(--color-primario) 100%);
     /*padding: 60px 20px 40px;*/
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 89, 38, 0.2);
+    border-bottom: 1px solid rgba(var(--color-casual-rgb), 0.2);
 }
 
 .banner-pagina__subtitulo {
@@ -849,17 +1023,18 @@ hr {
 
 .banner-pagina__titulo {
     font-size: 2.6rem;
-    color: var(--color-secundario);
+    color: var(--color-texto);
     margin-bottom: 12px;
 }
 
 .banner-pagina__desc {
     max-width: 700px;
     margin: 0 auto;
-    color: #bbb;
+    color: var(--color-texto-secundario);
     font-size: 1.05rem;
 }
 
+/* ===== 10. Tarjetas horizontales de fotógrafos y modelos===== */
 /* Tarjetas horizontales para fotografos y modelos */
 .contenedor-tarjetas-horizontales {
     max-width: 1140px;
@@ -874,7 +1049,7 @@ hr {
     display: grid;
     grid-template-columns:  1fr;
     background-color: var(--color-fondo-tarjeta);
-    border: 1px solid rgba(255, 89, 38, 0.35);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.35);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--sombra-tarjeta);
@@ -885,7 +1060,7 @@ hr {
 .tarjeta-horizontal:hover {
     transform: translateY(-5px);
     border-color: var(--color-casual);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), var(--brillo-casual);
+    box-shadow: 0 12px 30px rgba(var(--color-negro-rgb), 0.6), var(--brillo-casual);
 }
 
 
@@ -897,7 +1072,7 @@ hr {
     position: relative;
     width: 100%;
     height: 320px;
-    background: #111;
+    background: var(--color-fondo-media);
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -958,19 +1133,19 @@ hr {
 
 .tarjeta-horizontal__nombre {
     font-size: 2.2rem;
-    color: var(--color-secundario);
+    color: var(--color-texto);
     margin-bottom: 8px;
 }
 
 .tarjeta-horizontal__especialidad {
-    color: #ccc;
+    color: var(--color-texto-secundario);
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 16px;
 }
 
 .tarjeta-horizontal__bio {
-    color: #bbb;
+    color: var(--color-texto-secundario);
     font-size: 0.98rem;
     margin-bottom: 24px;
     line-height: 1.7;
@@ -980,7 +1155,7 @@ hr {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 15px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(var(--color-negro-rgb), 0.25);
     padding: 16px;
     border-radius: 8px;
     border-left: 3px solid var(--color-casual);
@@ -997,7 +1172,7 @@ hr {
 
 .tarjeta-horizontal__dato-valor {
     font-size: 0.95rem;
-    color: var(--color-secundario);
+    color: var(--color-texto);
     font-weight: 600;
 }
 
@@ -1023,11 +1198,11 @@ hr {
 
 .galeria-bloque {
     margin-bottom: 70px;
-    background: #191a1f;
-    border: 1px solid rgba(255, 89, 38, 0.25);
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.25);
     border-radius: 14px;
     padding: 35px 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(var(--color-negro-rgb), 0.4);
 }
 
 .galeria-bloque__encabezado {
@@ -1044,12 +1219,12 @@ hr {
 
 .galeria-bloque__titulo {
     font-size: 1.9rem;
-    color: var(--color-secundario);
+    color: var(--color-texto);
     margin: 5px 0 10px;
 }
 
 .galeria-bloque__desc {
-    color: #aaa;
+    color: var(--color-texto-suave);
     font-size: 0.95rem;
     max-width: 600px;
     margin: 0 auto;
@@ -1077,9 +1252,9 @@ hr {
 
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid rgba(255, 89, 38, 0.3);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    background: #000;
+    border: 1px solid rgba(var(--color-casual-rgb), 0.3);
+    box-shadow: 0 8px 25px rgba(var(--color-negro-rgb), 0.5);
+    background: var(--color-fondo-media);
     display: block;
 }
 
@@ -1111,13 +1286,13 @@ hr {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+    background: linear-gradient(0deg, rgba(var(--color-negro-rgb), 0.85) 0%, transparent 100%);
     padding: 30px 20px 15px;
-    color: #fff;
+    color: var(--color-texto);
     text-align: center;
 }
 
-
+/* ===== 11. Formularios, campos, validación y mensajes ===== */
 /* formulario  */
 .formulario-contenedor {
     max-width: 760px;
@@ -1127,18 +1302,18 @@ hr {
 
 .formulario-registro {
     background: var(--color-fondo-tarjeta);
-    border: 1px solid rgba(255, 89, 38, 0.4);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.4);
     border-radius: 12px;
     padding: 24px;
     box-shadow: var(--sombra-tarjeta);
 }
 
 .formulario-registro fieldset {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(var(--color-blanco-rgb), 0.1);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 24px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(var(--color-negro-rgb), 0.2);
 }
 
 .formulario-registro legend {
@@ -1159,7 +1334,7 @@ hr {
 .campo-grupo label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--color-secundario);
+    color: var(--color-texto);
 }
 
 .campo-input, 
@@ -1167,10 +1342,10 @@ hr {
 .campo-textarea {
     width: 100%;
     padding: 12px 14px;
-    background: #141519;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--color-fondo-input);
+    border: 1px solid rgba(var(--color-blanco-rgb), 0.15);
     border-radius: 6px;
-    color: #fff;
+    color: var(--color-texto);
     font-family: var(--fuente-cuerpo);
     font-size: 0.95rem;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -1182,7 +1357,7 @@ hr {
 .campo-textarea:focus {
     outline: none;
     border-color: var(--color-casual);
-    box-shadow: 0 0 10px rgba(255, 89, 38, 0.4);
+    box-shadow: 0 0 10px rgba(var(--color-casual-rgb), 0.4);
 }
 
 .opciones-radio {
@@ -1197,10 +1372,10 @@ hr {
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    background: #141519;
+    background: var(--color-fondo-input);
     padding: 8px 14px;
     border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(var(--color-blanco-rgb), 0.1);
     transition: all 0.2s ease;
 }
 
@@ -1230,7 +1405,7 @@ hr {
 
 .btn-submit {
     background-color: var(--color-casual);
-    color: #fff;
+    color: var(--color-texto-sobre-acento);
     border: none;
     padding: 12px 28px;
     border-radius: 6px;
@@ -1245,13 +1420,13 @@ hr {
 .btn-submit:hover {
     background-color: var(--color-casual-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 89, 38, 0.45);
+    box-shadow: 0 4px 15px rgba(var(--color-casual-rgb), 0.45);
 }
 
 .btn-reset {
     background-color: transparent;
-    color: #bbb;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-texto-secundario);
+    border: 1px solid rgba(var(--color-blanco-rgb), 0.2);
     padding: 12px 20px;
     border-radius: 6px;
     cursor: pointer;
@@ -1260,13 +1435,13 @@ hr {
 }
 
 .btn-reset:hover {
-    color: #fff;
-    border-color: #fff;
+    color: var(--color-texto);
+    border-color: var(--color-borde-suave); 
 }
 
 .alerta-exito {
-    background: rgba(38, 166, 91, 0.15);
-    border: 1px solid #26a65b;
+    background: rgba(var(--color-exito-rgb), 0.15);
+    border: 1px solid var(--color-exito);
     border-radius: 8px;
     padding: 20px;
     display: flex;
@@ -1278,14 +1453,14 @@ hr {
 
 .alerta-exito__icono {
     font-size: 1.8rem;
-    color: #2ecc71;
+    color:var(--color-exito-brillante);
     font-weight: bold;
 }
 
 
 
 /*  Clases para paginas */
-
+/* ===== 12. Página de paquetes y tabla comparativa===== */
 /* Clases para paquetes.html */
 .seccion-paquetes--espaciada {
     padding-top: 32px;
@@ -1293,7 +1468,7 @@ hr {
 
 .paquete-card__detalles {
     text-align: left;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(var(--color-negro-rgb), 0.3);
     padding: 14px;
     border-radius: 6px;
     margin-bottom: 20px;
@@ -1319,15 +1494,15 @@ hr {
 }
 
 .comparativa-caja {
-    background: #1d1e23;
-    border: 1px solid rgba(255, 89, 38, 0.3);
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.3);
     border-radius: 12px;
     padding: 24px;
     box-shadow: var(--sombra-tarjeta);
 }
 
 .comparativa-titulo {
-    color: var(--color-secundario);
+    color: var(--color-texto);
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 25px;
@@ -1342,9 +1517,9 @@ hr {
 
 .admin-tabla--comparativa th { 
     background-color: var(--color-casual);
-    color: var(--color-secundario);
+    color: var(--color-texto);
     padding: 12px;
-    border: 1px solid #444444;
+    border: 1px solid var(--color-borde-tabla);
     text-align: center;
 }
 
@@ -1352,11 +1527,11 @@ hr {
     background-color: var(--color-fondo-tarjeta);
     color: var(--color-texto);
     padding: 12px;
-    border: 1px solid #444444;
+    border: 1px solid var(--color-borde-tabla);
     text-align: center;
 }
 
-
+/* ===== 13. Páginas de detalle de paquetes ===== */
 /* Clases para páginas de desglose de paquetes  */
 .seccion-desglose {
     max-width: 1050px;
@@ -1369,7 +1544,7 @@ hr {
 }
 
 .tarjeta-horizontal__media {
-    background: #111111;
+    background: var(--color-fondo-media);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1391,20 +1566,20 @@ hr {
 
 .tarjeta-horizontal__moneda {
     font-size: 1.1rem;
-    color: #aaaaaa;
+    color: var(--color-texto-suave);
 }
 
 .tarjeta-horizontal__subtitulo-desglose {
-    color: var(--color-secundario);
+    color: var(--color-texto);
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
 .tarjeta-horizontal__titulo-desglose {
-    color: var(--color-secundario);
+    color: var(--color-texto);
     font-size: 1.2rem;
     margin-bottom: 12px;
-    border-bottom: 1px solid rgba(255, 89, 38, 0.3);
+    border-bottom: 1px solid rgba(var(--color-casual-rgb), 0.3);
     padding-bottom: 6px;
 }
 
@@ -1412,7 +1587,7 @@ hr {
     list-style: none;
     margin-bottom: 30px;
     font-size: 1rem;
-    color: #dddddd;
+    color: var(--color-texto-secundario);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1422,6 +1597,7 @@ hr {
     color: var(--color-casual);
 }
 
+/* ===== 14. Página de contacto ===== */
 /* Clases para contacto */
 .contacto-layout {
     max-width: 1100px;
@@ -1434,8 +1610,8 @@ hr {
 }
 
 .contacto-tarjeta {
-    background: #1d1e23;
-    border: 1px solid rgba(255, 89, 38, 0.35);
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.35);
     border-radius: 12px;
     padding: 24px;
     box-shadow: var(--sombra-tarjeta);
@@ -1450,7 +1626,7 @@ hr {
 
 .contacto-tarjeta__titulo {
     font-size: 2rem;
-    color: var(--color-secundario);
+    color: var(--color-texto);
     margin: 6px 0 20px;
 }
 
@@ -1459,7 +1635,7 @@ hr {
     flex-direction: column;
     gap: 20px;
     font-size: 0.95rem;
-    color: #cccccc;
+    color: var(--color-texto-secundario);
 }
 
 .contacto-tarjeta__item-titulo {
@@ -1471,12 +1647,12 @@ hr {
 .contacto-tarjeta__redes {
     margin-top: 24px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(var(--color-blanco-rgb), 0.1);
 }
 
 .contacto-tarjeta__redes-titulo {
     font-size: 1.1rem;
-    color: var(--color-secundario);
+    color: var(--color-texto);
     margin-bottom: 12px;
 }
 
@@ -1492,12 +1668,12 @@ hr {
 
 .contacto-formulario-titulo {
     font-size: 1.8rem;
-    color: var(--color-secundario);
+    color: var(--color-texto);
     margin-bottom: 8px;
 }
 
 .contacto-formulario-subtitulo {
-    color: #aaaaaa;
+    color: var(--color-texto-suave);
     font-size: 0.95rem;
     margin-bottom: 25px;
 }
@@ -1521,7 +1697,7 @@ hr {
     display: grid;
     grid-template-columns: 380px 1fr;
     background-color: var(--color-fondo-tarjeta);
-    border: 1px solid rgba(255, 89, 38, 0.35);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.35);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--sombra-tarjeta);
@@ -1538,7 +1714,7 @@ hr {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 15px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(var(--color-negro-rgb), 0.25);
     padding: 16px;
     border-radius: 8px;
     border-left: 3px solid var(--color-casual);
@@ -1553,8 +1729,8 @@ hr {
 
 .galeria-bloque {
     margin-bottom: 70px;
-    background: #191a1f;
-    border: 1px solid rgba(255, 89, 38, 0.25);
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.25);
     border-radius: 14px;
     padding: 35px 25px;
 }
@@ -1568,20 +1744,20 @@ hr {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid rgba(255, 89, 38, 0.3);
-    background: #000;
+    border: 1px solid rgba(var(--color-casual-rgb), 0.3);
+    background: var(--color-fondo-media);
 }
 
 .seccion-manifiesto {
     padding: 70px 30px;
     background-color: var(--color-secundario);
-    color: #1a1a1a;
+    color: var(--color-texto);
 }
 
 .manifiesto-caja {
     max-width: 900px;
     margin: 0 auto;
-    background: #ffffff;
+    background: var(--color-fondo-tarjeta);
     border-radius: 12px;
     padding: 50px 45px;
     border-left: 6px solid var(--color-casual);
@@ -1591,7 +1767,7 @@ hr {
     flex: 1 1 280px;
     max-width: 340px;
     background: var(--color-fondo-tarjeta);
-    border: 1px solid rgba(255, 89, 38, 0.3);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.3);
     border-radius: 10px;
     padding: 30px;
 }
@@ -1606,14 +1782,14 @@ hr {
     max-width: 480px;
     margin: 30px auto;
     background: var(--color-fondo-tarjeta);
-    border: 1px solid rgba(255, 89, 38, 0.4);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.4);
     border-radius: 12px;
     padding: 35px;
 }
 
 .admin-dashboard {
     background: var(--color-fondo-tarjeta);
-    border: 1px solid rgba(255, 89, 38, 0.3);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.3);
     border-radius: 12px;
     padding: 35px;
 }
@@ -1624,9 +1800,263 @@ hr {
     font-size: 0.9rem;
 }
 
+/*================================================================================*/
+/* ===== 15. CSS avanzado: medidas adaptables, clamp, nesting, transiciones y transformaciones ===== */
+/* CSS Avanzado 1-5*/
+/*Medidas adaptables */
+.presentacion__contenido {
+    width: min(100%, 75rem);
+}
 
-/* =========================================
-   diseño responsivo mobile-first
+.presentacion__descripcion {
+    width: calc(100% - 2rem);
+}
+
+.banner-pagina {
+    padding-inline: max(1rem, 4vw);
+}
+
+/* Tipografía fluida con clamp */
+.presentacion__titulo {
+    font-size: clamp(1.65rem, 4vw + 0.5rem, 2.8rem);
+}
+
+.presentacion__descripcion,
+.banner-pagina__desc {
+    font-size: clamp(1rem, 1.2vw + 0.65rem, 1.2rem);
+}
+
+.banner-pagina__titulo {
+    font-size: clamp(1.7rem, 3.5vw + 0.6rem, 2.8rem);
+}
+
+/*Nesting nativo */
+.menu {
+    & .menu__enlace {
+        transition: color 0.25s ease;
+    }
+
+    & .menu__enlace:hover,
+    & .menu__enlace:focus-visible {
+        color: var(--color-casual);
+    }
+}
+
+.encabezado__accion {
+    & .boton-contacto:hover,
+    & .boton-contacto:focus-visible {
+        background-color: var(--color-casual-hover);
+        box-shadow: 0 4px 15px rgba(var(--color-casual-rgb), 0.4);
+    }
+
+    & .boton-admin:hover,
+    & .boton-admin:focus-visible {
+        border-color: var(--color-casual);
+        color: var(--color-casual);
+    }
+}
+
+/* Transition */
+a,
+button,
+.boton-box,
+.boton-admin,
+.boton-contacto {
+    transition: color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+.boton-box:focus-visible,
+.boton-admin:focus-visible,
+.boton-contacto:focus-visible {
+    outline: 3px solid var(--color-casual);
+    outline-offset: 3px;
+}
+
+/* Transform */
+.pie-pagina__icono:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/*================================================================================*/
+
+
+/* 
+   Animacion logotipo
+   @keyframes con tres pasos: 0%, 50% y 100%
+ */
+
+/* ===== 16. Animaciones y efectos de logotipos===== */
+/*CSS Avanzado 6*/
+@keyframes animacion-logo {
+    0% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 2px 8px rgba(var(--color-casual-rgb), 0.3));
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.08);
+        filter: drop-shadow(0 4px 15px rgba(var(--color-casual-rgb), 0.8));
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 2px 8px rgba(var(--color-casual-rgb), 0.3));
+    }
+}
+
+/* Se aplica  la animacion al logotipo que hay en index de paquetes */
+
+.seccion-paquetes__logo {
+    animation: animacion-logo 3s ease-in-out infinite;
+}
+
+
+/* 
+  Reducir animacion, para respetar la preferencia del usuario
+  CSS Avanzado 7
+ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Desactivar la animación del logotipo */
+    .seccion-paquetes__logo {
+        animation: none !important;
+        transform: none;
+        filter: none;
+    }
+}
+
+/* ===== 17. Ajustes de contraste para temas claro y oscuro ===== */
+/* ==========================================================
+   Los textos heredan variables según el esquema de color.
+   No forzar un único color en páginas con fondos diferentes.
+   ========================================================== */
+
+/* Secciones cuyo fondo es claro en ambos temas */
+.presentacion,
+.seccion-paquetes,
+.seccion-fotografos,
+.seccion-pilares-contenedor {
+    color: var(--color-texto);
+}
+
+.presentacion__titulo,
+.seccion-paquetes__titulo,
+.seccion-fotografos__titulo,
+.seccion-pilares__titulo {
+    color: var(--color-texto);
+}
+
+.presentacion__descripcion,
+.seccion-paquetes__descripcion,
+.seccion-fotografos__descripcion {
+    color: var(--color-texto-secundario);
+}
+
+/* Los banners usan fondos dependientes del tema; sus textos usan
+   las variables globales y no se fijan a un color claro u oscuro. */
+.banner-pagina,
+.banner-pagina__titulo,
+.banner-pagina__desc {
+    color: var(--color-texto);
+}
+
+.banner-pagina__desc {
+    color: var(--color-texto-secundario);
+}
+
+.banner-pagina__subtitulo,
+.presentacion__subtitulo,
+.seccion-paquetes__subtitulo,
+.seccion-fotografos__subtitulo {
+    color: var(--color-casual);
+}
+
+/* Texto de las tarjetas: usa el color semántico, no grises fijos. */
+.paquete-card__titulo,
+.fotografo-card__nombre {
+    color: var(--color-texto);
+}
+
+.paquete-card__resumen,
+.fotografo-card__desc {
+    color: var(--color-texto-secundario);
+}
+
+/* ===== 18. Ajustes finales de presentación y tarjetas===== */
+/* Solo ajusta las secciones y tarjetas reportadas; el modo oscuro no cambia. */
+
+@media (prefers-color-scheme: light) {
+
+    /* Presentación principal */
+    .presentacion,
+    .presentacion__contenido,
+    .presentacion__titulares {
+        color: var(--color-texto);
+    }
+
+    .presentacion__titulo {
+        color: var(--color-texto);
+    }
+
+    .presentacion__descripcion {
+        color: var(--color-texto-secundario);
+    }
+
+    /* Encabezado de fotógrafos destacados */
+    .seccion-fotografos,
+    .seccion-fotografos__encabezado {
+        color: var(--color-texto);
+    }
+
+    .seccion-fotografos__titulo {
+        color: var(--color-texto);
+    }
+
+    .seccion-fotografos__descripcion {
+        color: var(--color-texto-secundario);
+    }
+
+    /* Tarjetas de desglose completo */
+    .tarjeta-horizontal--desglose,
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__info {
+        color: var(--color-texto);
+        background-color: var(--color-fondo-tarjeta);
+    }
+
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__nombre,
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__subtitulo-desglose,
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__titulo-desglose,
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__dato-valor {
+        color: var(--color-texto);
+    }
+
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__especialidad,
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__bio,
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__lista-desglose,
+    .tarjeta-horizontal--desglose .tarjeta-horizontal__moneda {
+        color: var(--color-texto-secundario);
+    }
+}
+
+
+/*================================================================================*/
+/* ===== 19. Diseño responsivo: móvil, tablet, escritorio y escritorio amplio===== */
+/*Diseño responsivo mobile-first
    movil: estilos base */
 
 /* Ajustes base para pantallas pequeñas */
@@ -2024,86 +2454,3 @@ hr {
         padding: 12px;
     }
 }
-
-/* CSS Avanzado */
-/*Medidas adaptables */
-.presentacion__contenido {
-    width: min(100%, 75rem);
-}
-
-.presentacion__descripcion {
-    width: calc(100% - 2rem);
-}
-
-.banner-pagina {
-    padding-inline: max(1rem, 4vw);
-}
-
-/* Tipografía fluida con clamp */
-.presentacion__titulo {
-    font-size: clamp(1.65rem, 4vw + 0.5rem, 2.8rem);
-}
-
-.presentacion__descripcion,
-.banner-pagina__desc {
-    font-size: clamp(1rem, 1.2vw + 0.65rem, 1.2rem);
-}
-
-.banner-pagina__titulo {
-    font-size: clamp(1.7rem, 3.5vw + 0.6rem, 2.8rem);
-}
-
-/*Nesting nativo */
-.menu {
-    & .menu__enlace {
-        transition: color 0.25s ease;
-    }
-
-    & .menu__enlace:hover,
-    & .menu__enlace:focus-visible {
-        color: var(--color-casual);
-    }
-}
-
-.encabezado__accion {
-    & .boton-contacto:hover,
-    & .boton-contacto:focus-visible {
-        background-color: var(--color-casual-hover);
-        box-shadow: 0 4px 15px rgba(255, 89, 38, 0.4);
-    }
-
-    & .boton-admin:hover,
-    & .boton-admin:focus-visible {
-        border-color: var(--color-casual);
-        color: var(--color-casual);
-    }
-}
-
-/* Transition */
-a,
-button,
-.boton-box,
-.boton-admin,
-.boton-contacto {
-    transition: color 0.25s ease,
-        background-color 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.25s ease;
-}
-
-a:focus-visible,
-button:focus-visible,
-.boton-box:focus-visible,
-.boton-admin:focus-visible,
-.boton-contacto:focus-visible {
-    outline: 3px solid var(--color-casual);
-    outline-offset: 3px;
-}
-
-/* Transform */
-.pie-pagina__icono:hover {
-    transform: scale(1.15) rotate(5deg);
-}
-
-

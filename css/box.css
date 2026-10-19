@@ -1,8 +1,25 @@
+/*
+ÍNDICE GENERAL — box.css
+01. Tarjetas de paquetes
+02. Imágenes, etiquetas, contenido, títulos y precios de paquetes
+03. Botones de tarjetas de paquetes
+04. Tarjetas de fotógrafos
+05. Imágenes, nombres, descripciones y botones de fotógrafos
+06. Botones generales y sus variantes
+07. Ajustes responsivos de tarjetas
+08. Galería de fotografías y pie superpuesto
+09. Sección Sobre nosotros
+10. Panel administrativo: acceso, formularios y dashboard
+*/
+
+/* Se retiró la prioridad forzada de reglas normales y se sustituyó un margen entre hermanos por gap. */
+
+
 * {
     box-sizing: border-box;
 }
 
-
+/* ===== 01. Tarjetas de paquetes ===== */
 /*Tarjeta paquetes */
 
 /*.seccion-paquetes__lista {
@@ -31,12 +48,13 @@
     margin: 0;
     padding: 24px 20px;
 
-    border: 1px solid rgba(255, 89, 38, 0.35);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.35);
     border-radius: 12px;
 
-    background-color: var(--color-fondo-tarjeta, #1d1e23);
+    background-color: var(--color-fondo-tarjeta, var(--color-fondo-tarjeta));
 
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+
+    box-shadow: 0 6px 18px rgba(var(--color-negro-rgb), 0.4);
 
     color: var(--color-texto);
     text-align: center;
@@ -95,10 +113,10 @@
 .paquete-card:hover {
     transform: translateY(-8px);
     border-color: var(--color-casual);
-    background-color: #23252c;
+    background-color: var(--color-fondo-tarjeta);
     /* Efecto de iluminación con sombra y resplandor de color casual */
-    box-shadow: 0 0 25px rgba(255, 89, 38, 0.45),
-        0 14px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 25px rgba(var(--color-casual-rgb), 0.45),
+        0 14px 30px rgba(var(--color-negro-rgb), 0.6);
 }
 
 /* Accesibilidad y foco por teclado  */
@@ -110,6 +128,7 @@
 .paquete-card:active {
     transform: scale(0.98);
 }
+/* ===== 02. Imágenes, etiquetas, contenido, títulos y precios de paquetes ===== */
 
 /* Imagen de la tarjeta */
 .paquete-card__figura {
@@ -140,13 +159,13 @@
     top: 10px;
     right: 10px;
     background-color: var(--color-casual);
-    color: #ffffff;
+    color: var(--color-texto-sobre-acento);
     padding: 4px 10px;
     font-size: 0.75rem;
     font-weight: bold;
     border-radius: 4px;
     letter-spacing: 1px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(var(--color-negro-rgb), 0.3);
 }
 
 /* Contenido de la tarjeta */
@@ -177,7 +196,7 @@
     font-family: var(--fuente-cuerpo);
     font-size: 1.5rem;
     font-weight: 800;
-    text-shadow: 0 0 12px rgba(255, 89, 38, 0.3);
+    text-shadow: 0 0 12px rgba(var(--color-casual-rgb), 0.3);
 
 }
 
@@ -185,18 +204,17 @@
 .paquete-card__moneda {
     font-size: 0.8rem;
     font-weight: normal;
-    color: #aaaaaa;
-
+    color: var(--color-texto-suave);
 }
 
 .paquete-card__resumen {
     font-size: 0.88rem;
-    color: #b5b5b5;
+    color: var(--color-texto-secundario);
     margin-bottom: 18px;
     line-height: 1.5;
 }
 
-
+/* ===== 03. Botones de tarjetas de paquetes ===== */
 /* Boton VER MAS */
 .paquete-card__boton {
     display: inline-block;
@@ -208,7 +226,7 @@
     border-radius: 6px;
 
     background-color: var(--color-casual);
-    color: #ffffff;
+    color: var(--color-texto-sobre-acento);
 
     font-family: var(--fuente-cuerpo);
     font-weight: 700;
@@ -228,7 +246,7 @@
 .paquete-card__boton:hover {
     background-color: transparent;
     color: var(--color-casual);
-    box-shadow: 0 0 12px rgba(255, 89, 38, 0.4);
+    box-shadow: 0 0 12px rgba(var(--color-casual-rgb), 0.4);
     transform: translateY(-2px);
 }
 
@@ -236,6 +254,7 @@
     transform: scale(0.97);
 }
 
+/* ===== 04. Tarjetas de fotógrafos ===== */
 /* Tarjeta fotógrafos */
 /*.seccion-fotografos__lista {
     display: flex;
@@ -263,13 +282,13 @@
     margin: 0;
     padding: 22px 20px;
 
-    border: 1px solid rgba(255, 89, 38, 0.35);
+    border: 1px solid rgba(var(--color-casual-rgb), 0.35);
     border-radius: 12px;
 
-    background-color: #ffffff;
+    background-color: var(--color-fondo-tarjeta);
 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    color: #1a1a1a;
+    box-shadow: 0 6px 20px rgba(var(--color-negro-rgb), 0.1);
+    color: var(--color-texto);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -281,8 +300,8 @@
     transform: translateY(-8px);
     border-color: var(--color-casual);
     /* Resplandor cálido y sombra envolvente */
-    box-shadow: 0 0 25px rgba(255, 89, 38, 0.5),
-        0 14px 28px rgba(0, 0, 0, 0.2);
+    box-shadow:  0 0 25px rgba(var(--color-casual-rgb), 0.5),
+        0 14px 28px rgba(var(--color-negro-rgb), 0.2);
 }
 
 .fotografo-card:focus-visible {
@@ -296,7 +315,7 @@
     padding: 0;
     border-radius: 8px;
     overflow: hidden;
-    background: #000;
+    background: var(--color-fondo-media);
 }
 
 
@@ -318,7 +337,7 @@
 /* Nombre del fotografo */
 .fotografo-card__nombre {
     margin: 14px 0 4px;
-    color: #1a1a1a;
+    color: var(--color-texto);
     font-family: var(--fuente-titulos);
     font-size: 1.45rem;
 }
@@ -336,7 +355,7 @@
 
 .fotografo-card__desc {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--color-texto-secundario);
     margin-bottom: 16px;
     line-height: 1.5;
 }
@@ -350,8 +369,8 @@
     border: 1px solid var(--color-casual);
     border-radius: 6px;
 
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto);
 
     font-family: var(--fuente-cuerpo);
     font-weight: 700;
@@ -368,8 +387,8 @@
 
 .fotografo-card__boton:hover {
     background-color: var(--color-casual);
-    color: #ffffff;
-    box-shadow: 0 0 12px rgba(255, 89, 38, 0.5);
+    color: var(--color-texto);
+    box-shadow: 0 0 12px rgba(var(--color-casual-rgb), 0.5);
     transform: translateY(-2px);
 }
 
@@ -402,7 +421,7 @@
 }
 
 
-
+/* ===== 06. Botones generales y sus variantes ===== */
 /*Botones generales */
 .boton-box {
     display: inline-block;
@@ -419,7 +438,7 @@
     font-weight: 700;
     font-size: 0.95rem;
 
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 8px rgba(var(--color-negro-rgb), 0.15);
     text-decoration: none;
     cursor: pointer;
 
@@ -429,8 +448,8 @@
 
 .boton-box:hover {
     background-color: var(--color-casual);
-    color: #ffffff;
-    box-shadow: 0 6px 16px rgba(255, 89, 38, 0.4);
+    color: var(--color-texto-sobre-acento);
+    box-shadow: 0 6px 16px rgba(var(--color-casual-rgb), 0.4);
     transform: translateY(-3px);
 }
 
@@ -440,13 +459,13 @@
 
 .boton-box--solido {
     background-color: var(--color-casual);
-    color: #ffffff;
+    color: var(--color-texto-sobre-acento);
 }
 
 .boton-box--solido:hover {
     background-color: var(--color-casual-hover);
-    color: #ffffff;
-    box-shadow: 0 6px 18px rgba(255, 89, 38, 0.5);
+    color: var(--color-texto-sobre-acento);
+    box-shadow: 0 6px 18px rgba(var(--color-casual-rgb), 0.5);
 }
 
 .boton-box--compacto {
@@ -454,6 +473,7 @@
     padding: 8px;
 }
 
+/* ===== 07. Ajustes responsivos de tarjetas===== */
 /* diseño responsivo de tarjetas mobile first*/
 
 /* Movil estilos base definidos arriba */
@@ -488,6 +508,7 @@
     }
 }
 
+/* ===== 08. Galería de fotografías y pie superpuesto ===== */
 /* Galería de fotografías */
 .marco-foto-vertical-contenedor,
 .marco-foto-horizontal-contenedor {
@@ -503,10 +524,10 @@
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    background: #090a0c;
-    border: 1px solid rgba(255, 89, 38, .38);
+    background: var(--color-fondo-media);
+    border: 1px solid rgba(var(--color-casual-rgb), .38);
     border-radius: var(--radio-md, 12px);
-    box-shadow: var(--sombra-tarjeta, 0 8px 24px rgba(0,0,0,.35));
+    box-shadow: var(--sombra-tarjeta, 0 8px 24px rgba(var(--color-negro-rgb), .35));
 }
 
 .marco-foto-vertical {
@@ -536,26 +557,27 @@
     left: 0;
     margin: 0;
     padding: 38px 20px 18px;
-    color: #fff;
+    color: var(--color-texto-sobre-acento);
     text-align: center;
-    background: linear-gradient(0deg, rgba(0,0,0,.92), rgba(0,0,0,0));
-    border-left: 3px solid var(--color-casual, #ff5926);
+    background: linear-gradient(0deg, rgba(var(--color-negro-rgb), .92), rgba(var(--color-negro-rgb), 0));
+    border-left: 3px solid var(--color-casual);
 }
 
 .carrusel-vertical__pie h3 {
     margin-bottom: 5px;
-    color: #fff;
+    color: var(--color-texto-sobre-acento);
     font-size: 1.1rem;
 }
 
 .carrusel-vertical__pie p {
-    color: #e5e5e5;
+    color: var(--color-texto-sobre-acento-secundario);
     font-size: .9rem;
 }
 
+/* ===== 09. Sección Sobre nosotros===== */
 /* Sobre nosotros */
 .manifiesto-caja__texto {
-    color: #292929;
+    color: var(--color-texto);
     font-size: clamp(1.05rem, 2vw, 1.25rem);
     line-height: 1.9;
 }
@@ -567,7 +589,7 @@
     gap: 20px;
     margin-top: 28px;
     padding-top: 22px;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid var(--color-borde-suave);
 }
 
 .manifiesto-caja__firma > div {
@@ -577,13 +599,13 @@
 }
 
 .manifiesto-caja__autores {
-    color: #202127;
+    color: var(--color-texto);
     font-family: var(--fuente-titulos, sans-serif);
     font-size: 1.1rem;
 }
 
 .manifiesto-caja__cargo {
-    color: #666;
+    color: var(--color-texto-suave);
 }
 
 .manifiesto-caja__logo {
@@ -595,7 +617,7 @@
 
 .seccion-pilares-contenedor {
     padding: 64px 24px;
-    background: var(--color-primario, #212227);
+    background: var(--color-primario);
 }
 
 .seccion-pilares__encabezado {
@@ -605,7 +627,7 @@
 }
 
 .seccion-pilares__subtitulo {
-    color: var(--color-casual, #ff5926);
+    color: var(--color-casual);
     font-size: .85rem;
     font-weight: 800;
     letter-spacing: 2px;
@@ -613,7 +635,7 @@
 
 .seccion-pilares__titulo {
     margin-top: 8px;
-    color: var(--color-secundario, #f2f2e6);
+    color: var(--color-texto);
 }
 
 .seccion-pilares.grid-productos {
@@ -635,39 +657,40 @@
     width: 100%;
     max-width: 350px;
     padding: 28px 24px;
-    color: var(--color-texto, #f2f2e6);
-    background: var(--color-fondo-tarjeta, #1d1e23);
-    border: 1px solid rgba(255, 89, 38, .3);
+    color: var(--color-texto,var(--color-texto));
+
+    background: var(--color-fondo-tarjeta, var(--color-fondo-tarjeta));
+    border: 1px solid rgba(var(--color-casual-rgb), .3);
     border-radius: var(--radio-md, 12px);
-    box-shadow: var(--sombra-tarjeta, 0 8px 24px rgba(0,0,0,.35));
+    box-shadow: var(--sombra-tarjeta, 0 8px 24px rgba(var(--color-negro-rgb), .35));
     transition: transform .25s ease, border-color .25s ease;
 }
 
 .pilar-card:hover {
     transform: translateY(-4px);
-    border-color: var(--color-casual, #ff5926);
+    border-color: var(--color-casual);
 }
 
 .pilar-card__icono {
-    color: var(--color-casual, #ff5926);
+    color: var(--color-casual);
     font-size: 2rem;
     line-height: 1.2;
 }
 
 .pilar-card__titulo {
-    color: var(--color-secundario, #f2f2e6);
+    color: var(--color-texto);
     font-size: 1.2rem;
 }
 
 .pilar-card__desc {
-    color: #bcbcc2;
+    color: var(--color-texto-secundario);
     font-size: .95rem;
 }
 
 .seccion-cta-final {
     padding: 60px 24px;
-    background: linear-gradient(135deg, #191a1f, #24252b);
-    border-top: 1px solid rgba(255, 89, 38, .2);
+    background: linear-gradient(135deg, var(--color-fondo-tarjeta), var(--color-fondo-tarjeta));
+    border-top: 1px solid rgba(var(--color-casual-rgb), .2);
 }
 
 .seccion-cta-final__contenedor {
@@ -677,14 +700,14 @@
 }
 
 .seccion-cta-final__titulo {
-    color: var(--color-secundario, #f2f2e6);
+    color: var(--color-texto);
     margin-bottom: 14px;
 }
 
 .seccion-cta-final__desc {
     max-width: 700px;
     margin: 0 auto;
-    color: #bcbcc2;
+    color: var(--color-texto-secundario);
 }
 
 .seccion-cta-final__acciones {
@@ -702,19 +725,21 @@
     align-items: center;
     min-height: 44px;
     padding: 11px 20px;
-    color: var(--color-secundario, #f2f2e6);
+    color: var(--color-texto);
     font-weight: 700;
     text-decoration: none;
-    border: 1px solid var(--color-casual, #ff5926);
+    border: 1px solid var(--color-casual);
     border-radius: var(--radio-sm, 6px);
     transition: color .2s ease, background-color .2s ease, transform .2s ease;
 }
 
 .boton-box:hover {
-    color: #fff;
-    background: var(--color-casual, #ff5926);
+    color: var(--color-texto-sobre-acento);
+    background: var(--color-casual);
     transform: translateY(-2px);
 }
+
+/* ===== 10. Panel administrativo: acceso, formularios y dashboard  ===== */
 
 /* Panel administrativo: acceso, formularios y dashboard */
 .panel-administracion {
@@ -725,7 +750,7 @@
 .admin-auth-caja,
 .admin-dashboard {
     min-width: 0;
-    box-shadow: var(--sombra-tarjeta, 0 8px 24px rgba(0,0,0,.35));
+    box-shadow: var(--sombra-tarjeta, 0 8px 24px rgba(var(--color-negro-rgb), .35));
 }
 
 .admin-tabs {
@@ -734,14 +759,14 @@
     gap: 8px;
     margin-bottom: 26px;
     padding: 5px;
-    background: #141519;
+    background: var(--color-fondo-input);
     border-radius: var(--radio-sm, 6px);
 }
 
 .admin-tab {
     min-width: 0;
     padding: 12px 10px;
-    color: #bcbcc2;
+    color: var(--color-texto-secundario);
     font: inherit;
     font-weight: 700;
     background: transparent;
@@ -753,9 +778,9 @@
 
 .admin-tab:hover,
 .admin-tab--activo {
-    color: #fff;
-    background: rgba(255, 89, 38, .14);
-    border-color: rgba(255, 89, 38, .5);
+    color: var(--color-texto);
+    background: rgba(var(--color-casual-rgb), .14);
+    border-color: rgba(var(--color-casual-rgb), .5);
 }
 
 .campo-grupo {
@@ -766,7 +791,7 @@
 }
 
 .campo-grupo label {
-    color: var(--color-secundario, #f2f2e6);
+    color: var(--color-texto);
     font-size: .95rem;
     font-weight: 700;
 }
@@ -777,27 +802,27 @@
     min-width: 0;
     min-height: 46px;
     padding: 11px 13px;
-    color: #f2f2e6;
+    color:var(--color-texto);
     font: inherit;
-    background: #15161a;
-    border: 1px solid rgba(255,255,255,.18);
+    background: var(--color-fondo-oscuro);
+    border: 1px solid rgba(var(--color-blanco-rgb), .18);
     border-radius: var(--radio-sm, 6px);
     outline: none;
     transition: border-color .2s ease, box-shadow .2s ease;
 }
 
 .campo-input:focus {
-    border-color: var(--color-casual, #ff5926);
-    box-shadow: 0 0 0 3px rgba(255,89,38,.15);
+    border-color: var(--color-casual);
+    box-shadow: 0 0 0 3px rgba(var(--color-casual-rgb), .15);
 }
 
 .admin-nota-credenciales {
     margin: 8px 0 20px;
     padding: 12px 14px;
-    color: #c5c5ca;
+    color: var(--color-texto-secundario);
     font-size: .85rem;
-    background: rgba(255,255,255,.04);
-    border-left: 3px solid var(--color-casual, #ff5926);
+    background: rgba(var(--color-blanco-rgb), .04);
+    border-left: 3px solid var(--color-casual);
     border-radius: 0 6px 6px 0;
     overflow-wrap: anywhere;
 }
@@ -810,7 +835,7 @@
     gap: 8px;
     min-height: 42px;
     padding: 10px 16px;
-    color: #fff;
+    color: var(--color-texto);
     font: inherit;
     font-weight: 700;
     text-align: center;
@@ -821,11 +846,11 @@
 }
 
 .btn-submit {
-    background: var(--color-casual, #ff5926);
+    background: var(--color-casual);
 }
 
 .btn-submit:hover {
-    background: var(--color-casual-hover, #ff7647);
+    background: var(--color-casual-hover);
     transform: translateY(-1px);
 }
 
@@ -834,14 +859,14 @@
 .btn-submit--margen-top { margin-top: 6px; }
 
 .btn-reset {
-    color: #ffb3a0;
-    background: rgba(255,89,38,.08);
-    border-color: rgba(255,89,38,.45);
+    color: var(--color-casual-claro);
+    background: rgba(var(--color-casual-rgb), .08);
+    border-color: rgba(var(--color-casual-rgb), .45);
 }
 
-.btn-reset:hover { background: rgba(255,89,38,.2); }
+.btn-reset:hover { background: rgba(var(--color-casual-rgb), .2); }
 .btn-reset--peligro { white-space: nowrap; }
-.admin-oculto { display: none !important; }
+.admin-oculto { display: none; }
 
 .admin-dashboard__header,
 .admin-bloque-cabecera {
@@ -854,14 +879,39 @@
 .admin-dashboard__header {
     padding-bottom: 24px;
     margin-bottom: 28px;
-    border-bottom: 1px solid rgba(255,255,255,.12);
+    border-bottom: 1px solid rgba(var(--color-blanco-rgb), .12);
 }
 
 .admin-header-etiqueta {
     display: inline-block;
     margin-bottom: 6px;
-    color: var(--color-casual, #ff5926);
+    color: var(--color-casual);
     font-size: .78rem;
     font-weight: 800;
     letter-spacing: 1.5px;
+}
+
+
+/* Contraste de tarjetas de paquetes en modo claro */
+@media (prefers-color-scheme: light) {
+    .paquete-card {
+        color: var(--color-texto);
+        background-color: var(--color-fondo-tarjeta);
+    }
+
+    .paquete-card__titulo {
+        color: var(--color-texto);
+    }
+
+    .paquete-card__resumen,
+    .paquete-card__precio small,
+    .paquete-card__moneda {
+        color: var(--color-texto-secundario);
+    }
+
+    .paquete-card__detalles,
+    .paquete-card__detalles p,
+    .paquete-card__detalles li {
+        color: var(--color-texto-secundario);
+    }
 }

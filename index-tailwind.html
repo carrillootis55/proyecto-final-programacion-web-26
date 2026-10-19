@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="./assets/icons/Imagotipo.png">
+
+    <meta name="description" content="Página principal de Hormiga Visual, estudio de fotografía en La Paz, Baja California Sur.">
+    <meta name="author" content="Alejandro Manuel Cota Ayala y Otilio Gamboa Carrillo">
+    <meta name="keywords" content="fotografía, fotógrafos, servicios fotográficos, portafolio, modelos, Hormiga Visual">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.hormigavisuallpz.com/">
+
+    <meta property="og:title" content="Hormiga Visual | Fotografía en La Paz, BCS">
+    <meta property="og:description" content="Descubre fotógrafos, modelos, fotografías y paquetes de servicios de Hormiga Visual. Capturamos historias y creamos imágenes que perduran.">
+    <meta property="og:image" content="https://www.hormigavisuallpz.com/assets/icons/Isotipo.png">
+    <meta property="og:url" content="https://www.hormigavisuallpz.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Hormiga Visual">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hormiga Visual | Fotografía en La Paz, BCS">
+    <meta name="twitter:description" content="Fotógrafos, modelos, fotografías y paquetes de servicios en Hormiga Visual.">
+    <meta name="twitter:image" content="https://www.hormigavisuallpz.com/assets/icons/Isotipo.png">
+
+    <title>Hormiga Visual | Servicios de Fotografías</title>
+   
+    <!-- Tailwind CSS-->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Corrección específica para los textos de los paquetes -->
+    <style>
+        #paquetes-destacados .paquete-card {
+            box-sizing: border-box;
+            min-width: 0;
+            height: 100%;
+            background-color: #212227;
+            color: #F2F2E6;
+        }
+
+        #paquetes-destacados .paquete-card__figura {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            margin: 0;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        #paquetes-destacados .paquete-card__imagen {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #paquetes-destacados .paquete-card__cuerpo {
+            box-sizing: border-box;
+            display: flex;
+            flex: 1 1 auto;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            min-width: 0;
+            padding: 24px;
+            overflow: visible;
+        }
+
+        #paquetes-destacados .paquete-card__titulo {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            color: #F2F2E6 !important;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 1.4;
+            letter-spacing: 0.06em;
+            text-indent: 0;
+            white-space: normal;
+            overflow: visible;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #paquetes-destacados .paquete-card__precio {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            width: 100%;
+            margin: 12px 0 0;
+            padding: 0;
+            color: #ff5926 !important;
+            font-size: 1.875rem;
+            font-weight: 800;
+            line-height: 1.4;
+            text-indent: 0;
+            overflow: visible;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #paquetes-destacados .paquete-card__precio strong {
+            color: #ff5926 !important;
+            font: inherit;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #paquetes-destacados .paquete-card__moneda {
+            color: #F2F2E6 !important;
+            font-size: 0.875rem;
+            font-weight: 600;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #paquetes-destacados .paquete-card__resumen {
+            display: block;
+            width: 100%;
+            margin: 16px 0 0;
+            padding: 0;
+            flex: 1 1 auto;
+            color: #F2F2E6 !important;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.8;
+            text-indent: 0;
+            white-space: normal;
+            overflow-wrap: anywhere;
+            word-break: normal;
+            overflow: visible;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #paquetes-destacados .paquete-card__boton {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 44px;
+            margin-top: 24px;
+            padding: 12px 20px;
+            border: 1px solid #ff5926;
+            border-radius: 8px;
+            background-color: #ff5926;
+            color: #ffffff !important;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            line-height: 1.5;
+            text-align: center;
+            text-decoration: none;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #paquetes-destacados .paquete-card__boton:hover {
+            background-color: #e94718;
+            border-color: #e94718;
+        }
+
+        #paquetes-destacados .paquete-card__badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            background-color: #ff5926;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        #paquetes-destacados .seccion-paquetes__titulo {
+            color: #F2F2E6;
+        }
+
+        #paquetes-destacados .seccion-paquetes__descripcion {
+            color: #F2F2E6;
+        }
+
+        @media (max-width: 639px) {
+            #paquetes-destacados .paquete-card__cuerpo {
+                padding: 20px;
+            }
+
+            #paquetes-destacados .paquete-card__titulo {
+                font-size: 1.35rem;
+            }
+
+            #paquetes-destacados .paquete-card__precio {
+                font-size: 1.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- ENCABEZADO -->
+        <header id="principal" class="encabezado">
+            <div class="encabezado__marca">
+                <a href="index.html">
+                    <img class="encabezado__logo"
+                         src="./assets/icons/Imagotipo.png"
+                         alt="Logotipo Hormiga Visual"
+                         width="50" height="71" loading="lazy">
+                </a>
+            </div>
+
+            <nav class="menu" aria-label="Navegación Principal">
+                <ul class="menu__lista">
+                    <li class="menu__item">
+                        <a class="menu__enlace menu__enlace--activo" href="index.html">Inicio</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__enlace" href="pages/paquetes.html">Paquetes ▾</a>
+                        <ul class="submenu" aria-label="Submenú de Paquetes">
+                            <li class="submenu__item">
+                                <a class="submenu__enlace" href="pages/paqueteexpress.html">Paquete Express ($700)</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__enlace" href="pages/paquetecaminata.html">Paquete Caminata ($1,200)</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__enlace" href="pages/paquetepremium.html">Paquete Premium ($2,000)</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__enlace" href="pages/fotografos.html">Fotógrafos</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__enlace" href="pages/modelos.html">Modelos</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__enlace" href="pages/fotografias.html">Fotografías</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__enlace" href="pages/nosotros.html">Sobre nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__accion">
+                <a class="boton-admin" href="pages/admin.html">Acceso Admin</a>
+                <a class="boton-contacto" href="pages/contacto.html">Contáctanos</a>
+            </div>
+        </header>
+
+        <hr>
+
+        <main class="contenido-principal">
+
+            <section id="secundario" class="presentacion">
+                <div class="presentacion__contenido">
+
+                    <small class="presentacion__subtitulo texto-casual">
+                        RETRATOS PERSONALES EN LA PAZ, BCS
+                    </small>
+
+                    <div class="presentacion__titulares">
+                        <h2 class="presentacion__titulo">Capturamos</h2>
+                        <h2 class="presentacion__titulo texto-casual">historias.</h2>
+                        <h2 class="presentacion__titulo">Creamos</h2>
+                        <h2 class="presentacion__titulo">imágenes.</h2>
+                    </div>
+
+                    <p class="presentacion__descripcion">
+                        Descubre fotógrafos, modelos y experiencias fotográficas que
+                        <br>transforman momentos en imágenes memorables.
+                    </p>
+
+                    <div class="presentacion__galeria">
+                        <figure class="presentacion__foto">
+                            <img class="presentacion__imagen"
+                                 src="./assets/imgIndex/DSC_0097.JPG"
+                                 alt="Imagen de modelo Omar"
+                                 width="299" height="449" loading="lazy">
+                        </figure>
+
+                        <figure class="presentacion__foto">
+                            <img class="presentacion__imagen"
+                                 src="./assets/imgIndex/DSC_0236.JPG"
+                                 alt="Imagen de modelo Brandon"
+                                 width="308" height="462" loading="lazy">
+                        </figure>
+
+                        <figure class="presentacion__foto">
+                            <img class="presentacion__imagen"
+                                 src="./assets/imgIndex/DSC_0267.jpg"
+                                 alt="Imagen de modelo Otilio"
+                                 width="323" height="404" loading="lazy">
+                        </figure>
+                    </div>
+
+                    <div class="presentacion__acciones">
+                        <a class="boton-box boton-box--solido" href="pages/paquetes.html">
+                            Ver todos los paquetes
+                        </a>
+                        <a class="boton-box" href="pages/fotografias.html">
+                            Explorar Fotografías
+                        </a>
+                        <a class="boton-box" href="pages/nosotros.html">
+                            Sobre Nosotros
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <hr>
+            <!-- Paquetes con Tailwind -->
+            <section id="paquetes-destacados"
+                     class="seccion-paquetes !box-border !w-full !px-4 !py-12 sm:!px-6 sm:!py-16 lg:!px-8"
+                     aria-labelledby="titulo-paquetes">
+
+                <div class="seccion-paquetes__encabezado !mx-auto !mb-10 !w-full !max-w-6xl !text-center sm:!mb-14">
+
+                    <small class="seccion-paquetes__subtitulo texto-casual !font-bold !tracking-[0.25em]">
+                        SERVICIOS
+                    </small>
+
+                    <div class="!mt-4">
+                        <h2 id="titulo-paquetes"
+                            class="seccion-paquetes__titulo !text-4xl !font-extrabold !leading-tight sm:!text-5xl lg:!text-6xl !text-[#212227]">
+                            Paquetes
+                        </h2>
+
+                        <h2 class="seccion-paquetes__titulo texto-casual !text-4xl !font-extrabold !leading-tight sm:!text-5xl lg:!text-6xl !text-[#212227]">
+                            destacados
+                        </h2>
+                    </div>
+
+                    <img class="seccion-paquetes__logo !mx-auto !mt-6 !h-auto !w-14 sm:!w-16"
+                         src="./assets/icons/Isotipo.png"
+                         alt="Isotipo de Hormiga Visual"
+                         width="70" height="98" loading="lazy">
+
+                    <p class="seccion-paquetes__descripcion !mx-auto !mt-5 !max-w-2xl !text-base !leading-7 sm:!text-lg !text-[#212227]" >
+                        Diseñados para cada ocasión y presupuesto, con la calidad y cuidado que mereces.
+                    </p>
+                </div>
+
+                <div class="seccion-paquetes__lista grid-productos !mx-auto !grid !w-full !max-w-6xl !grid-cols-1 !items-stretch !gap-6 sm:!grid-cols-2 sm:!gap-7 lg:!grid-cols-3 lg:!gap-8">
+
+                  
+                    <article tabindex="0"
+                             class="paquete-card !relative !flex !min-w-0 !flex-col !overflow-hidden !rounded-2xl !border !border-white/10 !bg-[#212227] !text-[#F2F2E6] !shadow-lg !transition-all !duration-300 hover:!-translate-y-2 hover:!border-[#ff5926] hover:!shadow-[0_12px_35px_rgba(255,89,38,0.20)] focus-visible:!outline focus-visible:!outline-2 focus-visible:!outline-[#ff5926]">
+
+                        <figure class="paquete-card__figura !relative !m-0 !aspect-[4/3] !w-full !overflow-hidden">
+                            <img class="paquete-card__imagen !block !h-full !w-full !object-cover !transition-transform !duration-500 hover:!scale-105"
+                                 src="./assets/imgIndex/DSC_0586.jpg"
+                                 alt="Imagen de modelo Camila"
+                                 width="205" height="256" loading="lazy">
+
+                            <span class="paquete-card__badge">
+                                POPULAR
+                            </span>
+                        </figure>
+
+                        <div class="paquete-card__cuerpo">
+                            <h3 class="paquete-card__titulo">EXPRESS</h3>
+
+                            <p class="paquete-card__precio">
+                                <strong>$700</strong>
+                                <small class="paquete-card__moneda">MXN</small>
+                            </p>
+
+                            <p class="paquete-card__resumen">
+                                10 fotos editadas • 1 hr de sesión • 1 locación • Sin cambio de outfit
+                            </p>
+
+                            <a class="paquete-card__boton"
+                               href="pages/paqueteexpress.html"
+                               aria-label="Ver más detalles sobre el paquete Express">
+                                VER MÁS
+                            </a>
+                        </div>
+                    </article>
+
+                   
+                    <article tabindex="0"
+                             class="paquete-card !relative !flex !min-w-0 !flex-col !overflow-hidden !rounded-2xl !border !border-[#ff5926]/60 !bg-[#212227] !text-[#F2F2E6] !shadow-[0_0_25px_rgba(255,89,38,0.10)] !transition-all !duration-300 hover:!-translate-y-2 hover:!border-[#ff5926] hover:!shadow-[0_12px_35px_rgba(255,89,38,0.25)] focus-visible:!outline focus-visible:!outline-2 focus-visible:!outline-[#ff5926]">
+
+                        <figure class="paquete-card__figura !relative !m-0 !aspect-[4/3] !w-full !overflow-hidden">
+                            <img class="paquete-card__imagen !block !h-full !w-full !object-cover !transition-transform !duration-500 hover:!scale-105"
+                                 src="./assets/imgIndex/DSC_0150.jpg"
+                                 alt="Imagen de modelo Otilio"
+                                 width="205" height="256" loading="lazy">
+
+                            <span class="paquete-card__badge">
+                                RECOMENDADO
+                            </span>
+                        </figure>
+
+                        <div class="paquete-card__cuerpo">
+                            <h3 class="paquete-card__titulo">CAMINATA</h3>
+
+                            <p class="paquete-card__precio">
+                                <strong>$1,200</strong>
+                                <small class="paquete-card__moneda">MXN</small>
+                            </p>
+
+                            <p class="paquete-card__resumen">
+                                20 fotos editadas • 2 hrs recorrido • 2 locaciones • 1 cambio de outfit
+                            </p>
+
+                            <a class="paquete-card__boton"
+                               href="pages/paquetecaminata.html"
+                               aria-label="Ver más detalles sobre el paquete Caminata">
+                                VER MÁS
+                            </a>
+                        </div>
+                    </article>
+
+                   
+                    <article tabindex="0"
+                             class="paquete-card !relative !flex !min-w-0 !flex-col !overflow-hidden !rounded-2xl !border !border-white/10 !bg-[#212227] !text-[#F2F2E6] !shadow-lg !transition-all !duration-300 hover:!-translate-y-2 hover:!border-[#ff5926] hover:!shadow-[0_12px_35px_rgba(255,89,38,0.20)] focus-visible:!outline focus-visible:!outline-2 focus-visible:!outline-[#ff5926] sm:!col-span-2 lg:!col-span-1">
+
+                        <figure class="paquete-card__figura !relative !m-0 !aspect-[4/3] !w-full !overflow-hidden">
+                            <img class="paquete-card__imagen !block !h-full !w-full !object-cover !transition-transform !duration-500 hover:!scale-105"
+                                 src="./assets/imgIndex/Foto Street-7.jpg"
+                                 alt="Fotografía de pareja"
+                                 width="205" height="307" loading="lazy">
+
+                            <span class="paquete-card__badge">
+                                COMPLETO
+                            </span>
+                        </figure>
+
+                        <div class="paquete-card__cuerpo">
+                            <h3 class="paquete-card__titulo">PREMIUM</h3>
+
+                            <p class="paquete-card__precio">
+                                <strong>$2,000</strong>
+                                <small class="paquete-card__moneda">MXN</small>
+                            </p>
+
+                            <p class="paquete-card__resumen">
+                                40 fotos editadas • 3+ hrs de sesión • 3 locaciones • 3 cambios de outfit
+                            </p>
+
+                            <a class="paquete-card__boton"
+                               href="pages/paquetepremium.html"
+                               aria-label="Ver más detalles sobre el paquete Premium">
+                                VER MÁS
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+
+            <hr>
+
+         
+            <section id="secundario" class="seccion-fotografos">
+
+                <div class="seccion-fotografos__encabezado">
+                    <small class="seccion-fotografos__subtitulo">EQUIPO</small>
+
+                    <div>
+                        <h2 class="seccion-fotografos__titulo">Fotógrafos</h2>
+                        <h2 class="seccion-fotografos__titulo texto-casual">destacados</h2>
+                    </div>
+
+                    <p class="seccion-fotografos__descripcion">
+                        Pasa el cursor para iluminar la tarjeta y haz clic en "Ver más" para conocer su estilo y experiencia.
+                    </p>
+
+                    <a class="seccion-fotografos__enlace" href="pages/fotografos.html">
+                        VER PERFILES COMPLETOS
+                    </a>
+                </div>
+
+                <div class="seccion-fotografos__lista grid-productos">
+
+                  
+                    <article class="fotografo-card" tabindex="0">
+                        <figure class="fotografo-card__figura">
+                            <img class="fotografo-card__imagen"
+                                 src="./assets/imgIndex/gabo.jpg"
+                                 alt="Imagen del fotógrafo Gabriel"
+                                 width="281" height="499" loading="lazy">
+                        </figure>
+
+                        <h3 class="fotografo-card__nombre">Gabriel</h3>
+                        <p class="fotografo-card__rol">FOTÓGRAFO Y EDITOR</p>
+                        <p class="fotografo-card__desc">
+                            Especialista en retrato urbano, contrastes profundos y fotografía en blanco y negro.
+                        </p>
+                        <a class="fotografo-card__boton"
+                           href="pages/fotografos.html#fotografo-gabriel"
+                           aria-label="Ver más información sobre Gabriel">VER MÁS</a>
+                    </article>
+
+                    
+                    <article class="fotografo-card" tabindex="0">
+                        <figure class="fotografo-card__figura">
+                            <img class="fotografo-card__imagen"
+                                 src="./assets/imgIndex/jesus.jpeg"
+                                 alt="Imagen del fotógrafo Jesús"
+                                 width="281" height="520" loading="lazy">
+                        </figure>
+
+                        <h3 class="fotografo-card__nombre">Jesús</h3>
+                        <p class="fotografo-card__rol">FOTÓGRAFO Y EDITOR</p>
+                        <p class="fotografo-card__desc">
+                            Especialista en colorimetría cálida, sesiones de moda y dirección de poses.
+                        </p>
+                        <a class="fotografo-card__boton"
+                           href="pages/fotografos.html#fotografo-jesus"
+                           aria-label="Ver más información sobre Jesús">VER MÁS</a>
+                    </article>
+
+                    
+                    <article class="fotografo-card" tabindex="0">
+                        <figure class="fotografo-card__figura">
+                            <img class="fotografo-card__imagen"
+                                 src="./assets/imgIndex/dante.jpeg"
+                                 alt="Imagen del fotógrafo Dante"
+                                 width="281" height="492" loading="lazy">
+                        </figure>
+
+                        <h3 class="fotografo-card__nombre">Dante</h3>
+                        <p class="fotografo-card__rol">FOTÓGRAFO Y EDITOR</p>
+                        <p class="fotografo-card__desc">
+                            Especialista en encuadres experimentales, street photography y capturas espontáneas.
+                        </p>
+                        <a class="fotografo-card__boton"
+                           href="pages/fotografos.html#fotografo-dante"
+                           aria-label="Ver más información sobre Dante">VER MÁS</a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer id="principal" class="pie-pagina layout__footer">
+
+            <div class="pie-pagina__columna">
+                <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+
+                <img class="pie-pagina__logo"
+                     src="./assets/icons/Isotipo.png"
+                     alt="Logotipo Hormiga Visual"
+                     width="91" height="128" loading="lazy">
+
+                <p class="pie-pagina__descripcion">
+                    Estudio de fotografía.
+                    <br>Capturamos historias, creamos
+                    <br>imágenes que perduran.
+                </p>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+                <p class="pie-pagina__redes-texto">WhatsApp | Instagram</p>
+
+                <div class="pie-pagina__iconos">
+                    <img class="pie-pagina__icono"
+                         src="./assets/imgIndex/logo whatsapp.jpg"
+                         alt="Logo WhatsApp"
+                         width="50" height="50" loading="lazy">
+
+                    <img class="pie-pagina__icono"
+                         src="./assets/imgIndex/insta logo.jpg"
+                         alt="Logo Instagram"
+                         width="51" height="51" loading="lazy">
+                </div>
+            </div>
+
+            <div class="pie-pagina__columna">
+                <p class="pie-pagina__info">
+                    <strong>Versión del software:</strong> 1.0
+                </p>
+
+                <p class="pie-pagina__info">
+                    <small>© 2026 Hormiga Visual. Todos los derechos reservados.</small>
+                </p>
+
+                <p class="pie-pagina__info">
+                    Avisos
+                    <a class="pie-pagina__enlace-admin" href="pages/admin.html">
+                        Acceso Administrativo (Login)
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hormiga Visual | Bootstrap</title>
+
+    <link rel="icon" type="image/png" href="./assets/icons/Imagotipo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .paquetes-bootstrap {
+            background: #15161a;
+            color: #f5f5f5;
+            padding: 60px 20px;
+        }
+        .paquetes-bootstrap .titulo-seccion {
+            color: #ff5926;
+        }
+        .paquetes-bootstrap .card {
+            border-color: rgba(255, 89, 38, .5);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+        .paquetes-bootstrap .card-img-top {
+            height: 260px;
+            object-fit: cover;
+        }
+        .paquetes-bootstrap .precio {
+            color: #ff5926;
+        }
+        .paquetes-bootstrap .btn-paquete {
+            background: #ff5926;
+            border: 0;
+            color: #15161a;
+            font-weight: 700;
+        }
+        .paquetes-bootstrap .btn-paquete:hover {
+            background: #ff784d;
+        }
+    </style>
+</head>
+
+<body>
+
+  <div class="layout">
+
+      <!-- Navegación -->
+      <header id="principal" class="encabezado">
+          <div class="encabezado__marca">
+              <a href="index.html">
+                  <img class="encabezado__logo" src="./assets/icons/Imagotipo.png"
+                      alt="Logotipo Hormiga Visual" width="50" height="71">
+              </a>
+          </div>
+
+          <nav class="menu" aria-label="Navegación principal">
+              <ul class="menu__lista">
+                  <li class="menu__item"><a class="menu__enlace menu__enlace--activo" href="index.html">Inicio</a></li>
+                  <li class="menu__item">
+                      <a class="menu__enlace" href="pages/paquetes.html">Paquetes ▾</a>
+                      <ul class="submenu" aria-label="Submenú de paquetes">
+                          <li class="submenu__item"><a class="submenu__enlace" href="pages/paqueteexpress.html">Paquete Express ($700)</a></li>
+                          <li class="submenu__item"><a class="submenu__enlace" href="pages/paquetecaminata.html">Paquete Caminata ($1,200)</a></li>
+                          <li class="submenu__item"><a class="submenu__enlace" href="pages/paquetepremium.html">Paquete Premium ($2,000)</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu__item"><a class="menu__enlace" href="pages/fotografos.html">Fotógrafos</a></li>
+                  <li class="menu__item"><a class="menu__enlace" href="pages/modelos.html">Modelos</a></li>
+                  <li class="menu__item"><a class="menu__enlace" href="pages/fotografias.html">Fotografías</a></li>
+                  <li class="menu__item"><a class="menu__enlace" href="pages/nosotros.html">Sobre nosotros</a></li>
+              </ul>
+          </nav>
+
+          <div class="encabezado__accion">
+              <a class="boton-admin" href="pages/admin.html">Acceso Admin</a>
+              <a class="boton-contacto" href="pages/contacto.html">Contáctanos</a>
+          </div>
+      </header>
+
+      <hr>
+
+      <main class="contenido-principal">
+
+          <!-- Presentación -->
+          <section class="presentacion">
+              <div class="presentacion__contenido">
+                  <small class="presentacion__subtitulo texto-casual">RETRATOS PERSONALES EN LA PAZ, BCS</small>
+
+                  <div class="presentacion__titulares">
+                      <h2 class="presentacion__titulo">Capturamos</h2>
+                      <h2 class="presentacion__titulo texto-casual">historias.</h2>
+                      <h2 class="presentacion__titulo">Creamos</h2>
+                      <h2 class="presentacion__titulo">imágenes.</h2>
+                  </div>
+
+                  <p class="presentacion__descripcion">
+                      Descubre fotógrafos, modelos y experiencias fotográficas que
+                      transforman momentos en imágenes memorables.
+                  </p>
+
+                  <div class="presentacion__galeria">
+                      <figure class="presentacion__foto">
+                          <img class="presentacion__imagen" src="./assets/imgIndex/DSC_0097.JPG" alt="Modelo Omar" width="299" height="449" loading="lazy">
+                      </figure>
+                      <figure class="presentacion__foto">
+                          <img class="presentacion__imagen" src="./assets/imgIndex/DSC_0236.JPG" alt="Modelo Brandon" width="308" height="462" loading="lazy">
+                      </figure>
+                      <figure class="presentacion__foto">
+                          <img class="presentacion__imagen" src="./assets/imgIndex/DSC_0267.jpg" alt="Modelo Otilio" width="323" height="404" loading="lazy">
+                      </figure>
+                  </div>
+
+                  <div class="presentacion__acciones">
+                      <a class="boton-box boton-box--solido" href="pages/paquetes.html">Ver todos los paquetes</a>
+                      <a class="boton-box" href="pages/fotografias.html">Explorar Fotografías</a>
+                      <a class="boton-box" href="pages/nosotros.html">Sobre Nosotros</a>
+                  </div>
+              </div>
+          </section>
+
+          <hr>
+
+          <!-- Paquetes con Bootstrap -->
+          <section class="paquetes-bootstrap">
+              <div class="container">
+                  <div class="text-center mb-5">
+                      <small class="text-uppercase titulo-seccion">SERVICIOS</small>
+                      <h2 class="display-5 fw-bold mt-2">
+                          Paquetes <span class="titulo-seccion">destacados</span>
+                      </h2>
+                      <img src="./assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="55" loading="lazy">
+                      <p class="mt-3">Diseñados para cada ocasión y presupuesto, con la calidad y cuidado que mereces.</p>
+                  </div>
+
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                      <div class="col">
+                          <article class="card h-100 bg-dark text-white">
+                              <div class="position-relative">
+                                  <img src="./assets/imgIndex/DSC_0586.jpg" class="card-img-top" alt="Modelo Camila" loading="lazy">
+                                  <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">POPULAR</span>
+                              </div>
+                              <div class="card-body d-flex flex-column text-center p-4">
+                                  <h3 class="card-title fw-bold">EXPRESS</h3>
+                                  <p class="precio fs-3 fw-bold">$700 <small class="fs-6">MXN</small></p>
+                                  <p>10 fotos editadas · 1 hr de sesión · 1 locación · Sin cambio de outfit</p>
+                                  <a class="btn btn-paquete mt-auto" href="pages/paqueteexpress.html">VER MÁS</a>
+                              </div>
+                          </article>
+                      </div>
+
+                      <div class="col">
+                          <article class="card h-100 bg-dark text-white">
+                              <div class="position-relative">
+                                  <img src="./assets/imgIndex/DSC_0150.jpg" class="card-img-top" alt="Modelo Otilio" loading="lazy">
+                                  <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">RECOMENDADO</span>
+                              </div>
+                              <div class="card-body d-flex flex-column text-center p-4">
+                                  <h3 class="card-title fw-bold">CAMINATA</h3>
+                                  <p class="precio fs-3 fw-bold">$1,200 <small class="fs-6">MXN</small></p>
+                                  <p>20 fotos editadas · 2 hrs recorrido · 2 locaciones · 1 cambio de outfit</p>
+                                  <a class="btn btn-paquete mt-auto" href="pages/paquetecaminata.html">VER MÁS</a>
+                              </div>
+                          </article>
+                      </div>
+
+                      <div class="col">
+                          <article class="card h-100 bg-dark text-white">
+                              <div class="position-relative">
+                                  <img src="./assets/imgIndex/Foto Street-7.jpg" class="card-img-top" alt="Fotografía de pareja" loading="lazy">
+                                  <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">COMPLETO</span>
+                              </div>
+                              <div class="card-body d-flex flex-column text-center p-4">
+                                  <h3 class="card-title fw-bold">PREMIUM</h3>
+                                  <p class="precio fs-3 fw-bold">$2,000 <small class="fs-6">MXN</small></p>
+                                  <p>40 fotos editadas · 3+ hrs de sesión · 3 locaciones · 3 cambios de outfit</p>
+                                  <a class="btn btn-paquete mt-auto" href="pages/paquetepremium.html">VER MÁS</a>
+                              </div>
+                          </article>
+                      </div>
+
+                  </div>
+              </div>
+          </section>
+
+          <hr>
+
+          <!-- Fotógrafos -->
+          <section class="seccion-fotografos">
+              <div class="seccion-fotografos__encabezado">
+                  <small class="seccion-fotografos__subtitulo">EQUIPO</small>
+                  <h2 class="seccion-fotografos__titulo">Fotógrafos</h2>
+                  <h2 class="seccion-fotografos__titulo texto-casual">destacados</h2>
+                  <p class="seccion-fotografos__descripcion">Conoce a nuestro equipo y descubre su estilo fotográfico.</p>
+                  <a class="seccion-fotografos__enlace" href="pages/fotografos.html">VER PERFILES COMPLETOS</a>
+              </div>
+
+              <div class="seccion-fotografos__lista grid-productos">
+                  <article class="fotografo-card" tabindex="0">
+                      <figure class="fotografo-card__figura">
+                          <img class="fotografo-card__imagen" src="./assets/imgIndex/gabo.jpg" alt="Fotógrafo Gabriel" loading="lazy">
+                      </figure>
+                      <h3 class="fotografo-card__nombre">Gabriel</h3>
+                      <p class="fotografo-card__rol">FOTÓGRAFO Y EDITOR</p>
+                      <p class="fotografo-card__desc">Especialista en retrato urbano, contrastes profundos y fotografía en blanco y negro.</p>
+                      <a class="fotografo-card__boton" href="pages/fotografos.html#fotografo-gabriel">VER MÁS</a>
+                  </article>
+
+                  <article class="fotografo-card" tabindex="0">
+                      <figure class="fotografo-card__figura">
+                          <img class="fotografo-card__imagen" src="./assets/imgIndex/jesus.jpeg" alt="Fotógrafo Jesús" loading="lazy">
+                      </figure>
+                      <h3 class="fotografo-card__nombre">Jesús</h3>
+                      <p class="fotografo-card__rol">FOTÓGRAFO Y EDITOR</p>
+                      <p class="fotografo-card__desc">Especialista en colorimetría cálida, sesiones de moda y dirección de poses.</p>
+                      <a class="fotografo-card__boton" href="pages/fotografos.html#fotografo-jesus">VER MÁS</a>
+                  </article>
+
+                  <article class="fotografo-card" tabindex="0">
+                      <figure class="fotografo-card__figura">
+                          <img class="fotografo-card__imagen" src="./assets/imgIndex/dante.jpeg" alt="Fotógrafo Dante" loading="lazy">
+                      </figure>
+                      <h3 class="fotografo-card__nombre">Dante</h3>
+                      <p class="fotografo-card__rol">FOTÓGRAFO Y EDITOR</p>
+                      <p class="fotografo-card__desc">Especialista en encuadres experimentales, street photography y capturas espontáneas.</p>
+                      <a class="fotografo-card__boton" href="pages/fotografos.html#fotografo-dante">VER MÁS</a>
+                  </article>
+              </div>
+          </section>
+
+      </main>
+
+      <!-- Pie de página -->
+      <footer class="pie-pagina layout__footer">
+          <div class="pie-pagina__columna">
+              <h2 class="pie-pagina__titulo">Hormiga Visual</h2>
+              <img class="pie-pagina__logo" src="./assets/icons/Isotipo.png" alt="Logotipo Hormiga Visual" width="91" loading="lazy">
+              <p class="pie-pagina__descripcion">Estudio de fotografía.<br>Capturamos historias, creamos imágenes que perduran.</p>
+          </div>
+
+          <div class="pie-pagina__columna">
+              <h3 class="pie-pagina__subtitulo">Contáctanos</h3>
+              <p class="pie-pagina__redes-texto">WhatsApp | Instagram</p>
+              <div class="pie-pagina__iconos">
+                  <img class="pie-pagina__icono" src="./assets/imgIndex/logo whatsapp.jpg" alt="WhatsApp" width="50" loading="lazy">
+                  <img class="pie-pagina__icono" src="./assets/imgIndex/insta logo.jpg" alt="Instagram" width="50" loading="lazy">
+              </div>
+          </div>
+
+          <div class="pie-pagina__columna">
+              <p class="pie-pagina__info"><strong>Versión del software:</strong> 1.0</p>
+              <p class="pie-pagina__info"><small>© 2026 Hormiga Visual. Todos los derechos reservados.</small></p>
+              <p class="pie-pagina__info">Avisos <a class="pie-pagina__enlace-admin" href="pages/admin.html">Acceso Administrativo (Login)</a></p>
+          </div>
+      </footer>
+
+  </div>
+</body>
+</html>
