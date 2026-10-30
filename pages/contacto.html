@@ -24,6 +24,19 @@
 
     <div class="layout">
 
+        <div class="barra-busqueda-superior" id="barra-busqueda-superior">
+            <form id="form-buscador" class="barra-busqueda-superior__form" role="search">
+                <label for="buscador" class="barra-busqueda-superior__label">
+                    <svg class="barra-busqueda-superior__icono" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Buscar:</span>
+                </label>
+                <input type="search" id="buscador" class="barra-busqueda-superior__input" placeholder="Buscar..." autocomplete="off">
+            </form>
+        </div>
+
         <header id="principal" class="encabezado navbar layout__header">
             <div class="encabezado__marca">
                 <a href="../index.html">
@@ -50,8 +63,15 @@
             </nav>
 
             <div class="encabezado__accion">
+                <button id="btn-tema" class="boton-tema" type="button" aria-label="Cambiar modo claro u oscuro">🌙</button>
                 <a class="boton-admin" href="admin.html">Acceso Admin</a>
                 <a class="boton-contacto menu__enlace--activo" href="contacto.html">Contáctanos</a>
+                <!-- Botón menú hamburguesa responsivo -->
+                <button id="btn-menu" class="boton-hamburguesa" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">
+                    <span class="boton-hamburguesa__linea"></span>
+                    <span class="boton-hamburguesa__linea"></span>
+                    <span class="boton-hamburguesa__linea"></span>
+                </button>
             </div>
         </header>
 
@@ -170,6 +190,11 @@
         </footer>
 
     </div> 
+    <!-- ========================================================== -->
+    <!-- Script para menú hamburguesa, -->
+    <!-- filtrado de tarjetas y botón de modo claro/oscuro -->
+    <!-- ========================================================== -->
+    <script src="../js/aplicardom.js" defer></script>
 </body>
 
 </html>
