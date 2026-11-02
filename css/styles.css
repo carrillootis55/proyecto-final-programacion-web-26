@@ -2914,3 +2914,30 @@ button:focus-visible,
         padding: 12px;
     }
 }
+
+/* Estilos para los mensajes de validación del formulario de contacto */
+.error-campo {
+    color: #ff7b72;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    min-height: 0;
+}
+
+.campo-invalido {
+    border-color: #ff7b72 !important;
+    box-shadow: 0 0 0 1px #ff7b72;
+}
+
+.mensaje-formulario {
+    margin-top: 14px;
+    color: var(--color-casual);
+    font-weight: 600;
+}
+
+.mensaje-formulario:empty {
+    display: none;
+}
+
+.mensaje-formulario--error {
+    color: #ff7b72;
+}

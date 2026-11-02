@@ -128,33 +128,38 @@
                     <p class="contacto-formulario-subtitulo">Te responderemos en menos de 24 horas hábiles.</p>
                     
                     <!-- Formulario estándar  -->
-                    <form action="#" method="POST">
+                    <form id="form-contacto" novalidate>
                         <div class="campo-grupo">
                             <label for="contacto-nombre">Tu Nombre: *</label>
-                            <input class="campo-input" type="text" id="contacto-nombre" name="nombre" required placeholder="Nombre completo" autocomplete="name">
+                            <input class="campo-input" type="text" id="contacto-nombre" name="nombre" required placeholder="Nombre completo" autocomplete="name" aria-describedby="error-nombre">
+                            <span class="error-campo" id="error-nombre" data-error-para="nombre" aria-live="polite"></span>
                         </div>
 
                         <div class="campo-grupo">
                             <label for="contacto-email">Tu Correo Electrónico: *</label>
-                            <input class="campo-input" type="email" id="contacto-email" name="email" required placeholder="correo@ejemplo.com" autocomplete="email">
+                            <input class="campo-input" type="email" id="contacto-email" name="email" required placeholder="correo@ejemplo.com" autocomplete="email" aria-describedby="error-email">
+                            <span class="error-campo" id="error-email" data-error-para="email" aria-live="polite"></span>
                         </div>
 
                         <div class="campo-grupo">
                             <label for="contacto-asunto">Asunto / Paquete de Interés:</label>
-                            <select class="campo-select" id="contacto-asunto" name="asunto">
+                            <select class="campo-select" id="contacto-asunto" name="asunto" aria-describedby="error-asunto">
                                 <option value="express">Paquete Express ($700 MXN)</option>
                                 <option value="caminata">Paquete Caminata ($1,200 MXN)</option>
                                 <option value="premium">Paquete Premium ($2,000 MXN)</option>
                                 <option value="otro">Consulta general o sesión personalizada</option>
                             </select>
+                            <span class="error-campo" id="error-asunto" data-error-para="asunto" aria-live="polite"></span>
                         </div>
 
                         <div class="campo-grupo">
                             <label for="contacto-mensaje">Mensaje o Pregunta: *</label>
-                            <textarea class="campo-textarea" id="contacto-mensaje" name="mensaje" rows="4" required placeholder="Escribe aquí tus dudas..."></textarea>
+                            <textarea class="campo-textarea" id="contacto-mensaje" name="mensaje" rows="4" required placeholder="Escribe aquí tus dudas..." aria-describedby="error-mensaje"></textarea>
+                            <span class="error-campo" id="error-mensaje" data-error-para="mensaje" aria-live="polite"></span>
                         </div>
 
                         <button class="btn-submit btn-submit--bloque" type="submit">Enviar Mensaje</button>
+                        <p class="mensaje-formulario" id="mensaje-formulario" role="status" aria-live="polite"></p>
                     </form>
                 </article>
 
@@ -195,6 +200,8 @@
     <!-- filtrado de tarjetas y botón de modo claro/oscuro -->
     <!-- ========================================================== -->
     <script src="../js/aplicardom.js" defer></script>
+    <!-- Modulo que valida el formulario de contacto -->
+    <script type="module" src="../js/contacto/main.js"></script>
 </body>
 
 </html>
