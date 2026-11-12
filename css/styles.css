@@ -2941,3 +2941,12 @@ button:focus-visible,
 .mensaje-formulario--error {
     color: #ff7b72;
 }
+
+/* Estados de carga y error de los paquetes (fetch) */
+.mensaje-sin-resultados--error {
+    border-color: #ff7b72;
+}
+
+.mensaje-sin-resultados .mensaje-sin-resultados__boton {
+    margin-top: 14px;
+}

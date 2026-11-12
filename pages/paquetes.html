@@ -84,78 +84,16 @@
 
             <!-- Sección de tarjetas-->
             <section class="seccion-paquetes seccion-paquetes--espaciada">
-                <!-- Listado con Flexbox  -->
-                <div class="seccion-paquetes__lista grid-productos">
+                <!-- Mensajes de carga, error y vacío (los controla js/paquetes/main.js) -->
+                <div id="estado-paquetes" class="mensaje-sin-resultados" role="status" aria-live="polite" hidden></div>
+                <noscript>
+                    <div class="mensaje-sin-resultados"><p>Activa JavaScript para ver los paquetes.</p></div>
+                </noscript>
 
-                    <!-- Paquete 1: EXPRESS -->
-                    <article class="paquete-card card" tabindex="0">
-                        <figure class="paquete-card__figura">
-                            <img class="paquete-card__imagen" src="../assets/imgIndex/DSC_0586.jpg" alt="Paquete Express Hormiga Visual" loading="lazy">
-                            <span class="paquete-card__badge">EXPRESS</span>
-                        </figure>
-                        <div class="paquete-card__cuerpo">
-                            <h2 class="paquete-card__titulo">EXPRESS</h2>
-                            <p class="paquete-card__precio">$700 <small class="paquete-card__moneda">MXN</small></p>
-                            <p class="paquete-card__resumen">Sesión rápida y esencial, ideal para renovación de redes y retrato personal básico.</p>
-                            <div class="paquete-card__detalles">
-                                <p>✓ <strong>10 fotografías</strong> editadas</p>
-                                <p>✓ <strong>1 hora</strong> de sesión</p>
-                                <p>✓ <strong>1 locación</strong> urbana</p>
-                                <p>✓ <strong>Sin cambios</strong> de outfit</p>
-                            </div>
-                            <div class="paquete-card__acciones">
-                                <a class="boton-box boton-box--compacto" href="paqueteexpress.html">Ver Desglose Completo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Paquete 2: CAMINATA -->
-                    <article class="paquete-card card" tabindex="0">
-                        <figure class="paquete-card__figura">
-                            <img class="paquete-card__imagen" src="../assets/imgIndex/DSC_0150.jpg" alt="Paquete Caminata Hormiga Visual" loading="lazy">
-                            <span class="paquete-card__badge">POPULAR</span>
-                        </figure>
-                        <div class="paquete-card__cuerpo">
-                            <h2 class="paquete-card__titulo">CAMINATA</h2>
-                            <p class="paquete-card__precio">$1,200 <small class="paquete-card__moneda">MXN</small></p>
-                            <p class="paquete-card__resumen">Nuestra ruta urbana más solicitada: captura momentos espontáneos en movimiento.</p>
-                            <div class="paquete-card__detalles">
-                                <p>✓ <strong>20 fotografías</strong> editadas</p>
-                                <p>✓ <strong>2 horas</strong> de recorrido urbano</p>
-                                <p>✓ <strong>2 locaciones</strong> seleccionadas</p>
-                                <p>✓ <strong>1 cambio</strong> de outfit (2 atuendos)</p>
-                            </div>
-                            <div class="paquete-card__acciones">
-                                <a class="boton-box boton-box--compacto" href="paquetecaminata.html">Ver Desglose Completo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Paquete 3: PREMIUM -->
-                    <article class="paquete-card card" tabindex="0">
-                        <figure class="paquete-card__figura">
-                            <img class="paquete-card__imagen" src="../assets/imgIndex/Foto Street-7.jpg" alt="Paquete Premium Hormiga Visual" loading="lazy">
-                            <span class="paquete-card__badge">EXCLUSIVO</span>
-                        </figure>
-                        <div class="paquete-card__cuerpo">
-                            <h2 class="paquete-card__titulo">PREMIUM</h2>
-                            <p class="paquete-card__precio">$2,000 <small class="paquete-card__moneda">MXN</small></p>
-                            <p class="paquete-card__resumen">La experiencia definitiva con dirección artística y múltiples ambientes de luz.</p>
-                            <div class="paquete-card__detalles">
-                                <p>✓ <strong>40 fotografías</strong> editadas</p>
-                                <p>✓ <strong>3 horas o más</strong> de sesión</p>
-                                <p>✓ <strong>3 locaciones</strong> distintas</p>
-                                <p>✓ <strong>3 cambios</strong> de outfit</p>
-                            </div>
-                            <div class="paquete-card__acciones">
-                                <a class="boton-box boton-box--compacto" href="paquetepremium.html">Ver Desglose Completo</a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
+                <!-- Listado con Flexbox: las tarjetas se generan con fetch desde js/datos/paquetes.json -->
+                <div id="lista-paquetes" class="seccion-paquetes__lista grid-productos" aria-busy="true"></div>
             </section>
-
+            
             <!-- Tabla comparativa detallada con etiquetas semánticas -->
             <section id="comparativa" class="seccion-comparativa">
                 <article class="comparativa-caja">
@@ -249,6 +187,7 @@
     <!-- filtrado de tarjetas y botón de modo claro/oscuro -->
     <!-- ========================================================== -->
     <script src="../js/aplicardom.js" defer></script>
+    <script type="module" src="../js/paquetes/main.js"></script>
 </body>
 
 </html>

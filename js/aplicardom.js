@@ -39,6 +39,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================
   const btnTema = document.querySelector("#btn-tema");
 
+  // Funciones para guardar y leer en localStorage siempre como JSON
+  const CLAVE_TEMA = "tema_hormiga_visual";
+
+  const guardarJSON = (clave, valor) => {
+    try {
+      localStorage.setItem(clave, JSON.stringify(valor));
+    } catch {
+      // Si el navegador bloquea el almacenamiento, el tema solo dura esa visita
+    }
+  };
+
+  const leerJSON = (clave, defecto = null) => {
+    try {
+      return JSON.parse(localStorage.getItem(clave)) ?? defecto;
+    } catch {
+      // JSON dañado o almacenamiento bloqueado, se usa el valor por defecto
+      return defecto;
+    }
+  };
+
   const actualizarIndicadorTema = () => {
     if (!btnTema) return;
     const esOscuro =
@@ -58,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   //Restaurar preferencia almacenada en localStorage
-  const temaGuardado = localStorage.getItem("tema_hormiga_visual");
+  const temaGuardado = leerJSON(CLAVE_TEMA, {}).modo;
   if (temaGuardado === "oscuro") {
     document.body.classList.add("oscuro");
     document.body.classList.remove("claro");
@@ -79,11 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (actualmenteOscuro) {
         document.body.classList.remove("oscuro");
         document.body.classList.add("claro");
-        localStorage.setItem("tema_hormiga_visual", "claro");
+        guardarJSON(CLAVE_TEMA, { modo: "claro" });
       } else {
         document.body.classList.remove("claro");
         document.body.classList.add("oscuro");
-        localStorage.setItem("tema_hormiga_visual", "oscuro");
+        guardarJSON(CLAVE_TEMA, { modo: "oscuro" });
       }
       actualizarIndicadorTema();
     });

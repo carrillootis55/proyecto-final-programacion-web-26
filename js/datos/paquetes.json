@@ -1,0 +1,53 @@
+[
+  {
+    "id": "express",
+    "nombre": "EXPRESS",
+    "badge": "EXPRESS",
+    "precio": 700,
+    "moneda": "MXN",
+    "resumen": "Sesión rápida y esencial, ideal para renovación de redes y retrato personal básico.",
+    "imagen": "assets/imgIndex/DSC_0586.jpg",
+    "alt": "Paquete Express Hormiga Visual",
+    "detalles": [
+      { "destacado": "10 fotografías", "texto": "editadas" },
+      { "destacado": "1 hora", "texto": "de sesión" },
+      { "destacado": "1 locación", "texto": "urbana" },
+      { "destacado": "Sin cambios", "texto": "de outfit" }
+    ],
+    "enlace": "paqueteexpress.html"
+  },
+  {
+    "id": "caminata",
+    "nombre": "CAMINATA",
+    "badge": "POPULAR",
+    "precio": 1200,
+    "moneda": "MXN",
+    "resumen": "Nuestra ruta urbana más solicitada: captura momentos espontáneos en movimiento.",
+    "imagen": "assets/imgIndex/DSC_0150.jpg",
+    "alt": "Paquete Caminata Hormiga Visual",
+    "detalles": [
+      { "destacado": "20 fotografías", "texto": "editadas" },
+      { "destacado": "2 horas", "texto": "de recorrido urbano" },
+      { "destacado": "2 locaciones", "texto": "seleccionadas" },
+      { "destacado": "1 cambio", "texto": "de outfit (2 atuendos)" }
+    ],
+    "enlace": "paquetecaminata.html"
+  },
+  {
+    "id": "premium",
+    "nombre": "PREMIUM",
+    "badge": "EXCLUSIVO",
+    "precio": 2000,
+    "moneda": "MXN",
+    "resumen": "La experiencia definitiva con dirección artística y múltiples ambientes de luz.",
+    "imagen": "assets/imgIndex/Foto Street-7.jpg",
+    "alt": "Paquete Premium Hormiga Visual",
+    "detalles": [
+      { "destacado": "40 fotografías", "texto": "editadas" },
+      { "destacado": "3 horas o más", "texto": "de sesión" },
+      { "destacado": "3 locaciones", "texto": "distintas" },
+      { "destacado": "3 cambios", "texto": "de outfit" }
+    ],
+    "enlace": "paquetepremium.html"
+  }
+]
