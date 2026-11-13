@@ -1,0 +1,24 @@
+{
+  "name": "programacion-web-visual-code",
+  "version": "1.0.0",
+  "description": "Este repositorio corresponde al **Proyecto Final de Programación Web 2026-II**, desarrollado para la materia de **Programación Web**, correspondiente al **quinto semestre** de la carrera de **Ingeniería en Desarrollo de Software**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carrillootis55/proyecto-final-programacion-web-26.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/carrillootis55/proyecto-final-programacion-web-26/issues"
+  },
+  "homepage": "https://github.com/carrillootis55/proyecto-final-programacion-web-26#readme",
+  "dependencies": {
+    "sweetalert2": "^11.26.25"
+  }
+}
